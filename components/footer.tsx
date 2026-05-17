@@ -1,19 +1,23 @@
-import { Camera, Mail, MessageCircle, Music2 } from "lucide-react";
+import { CalendarCheck, Camera, Mail, MapPin, MessageCircle, Music2 } from "lucide-react";
+import { BOOKING_FORM_URL, CONTACT_EMAIL, SOCIALS } from "@/lib/site";
 
 const socials = [
   {
-    label: "Instagram",
-    href: "https://www.instagram.com/panthercityhelpersfw/",
+    label: SOCIALS.instagram.label,
+    handle: SOCIALS.instagram.handle,
+    href: SOCIALS.instagram.href,
     icon: Camera,
   },
   {
-    label: "TikTok",
-    href: "https://www.tiktok.com/@panthercityhelpersfw",
+    label: SOCIALS.tiktok.label,
+    handle: SOCIALS.tiktok.handle,
+    href: SOCIALS.tiktok.href,
     icon: Music2,
   },
   {
-    label: "Facebook",
-    href: "https://www.facebook.com/search/top?q=Panther%20City%20Helpers",
+    label: SOCIALS.facebook.label,
+    handle: SOCIALS.facebook.handle,
+    href: SOCIALS.facebook.href,
     icon: MessageCircle,
   },
 ];
@@ -35,10 +39,30 @@ export function Footer() {
         </p>
       </div>
       <div className="footer-contact">
-        <a href="mailto:panthercityhelpersfw@gmail.com">
+        <a href={`mailto:${CONTACT_EMAIL}`}>
           <Mail size={18} aria-hidden="true" />
-          panthercityhelpersfw@gmail.com
+          {CONTACT_EMAIL}
         </a>
+        <a href={BOOKING_FORM_URL} target="_blank" rel="noreferrer">
+          <CalendarCheck size={18} aria-hidden="true" />
+          Booking request form
+        </a>
+        <span className="footer-location">
+          <MapPin size={18} aria-hidden="true" />
+          Fort Worth, TX
+        </span>
+        <div className="footer-handles" aria-label="Social handles">
+          {socials.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {social.label}: {social.handle}
+            </a>
+          ))}
+        </div>
         <div className="social-links" aria-label="Social links">
           {socials.map((social) => (
             <a

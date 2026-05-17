@@ -1,4 +1,5 @@
-import { Mail } from "lucide-react";
+import { ClipboardList } from "lucide-react";
+import { BOOKING_FORM_URL } from "@/lib/site";
 
 const navItems = [
   { label: "Services", href: "#services" },
@@ -26,9 +27,14 @@ export function Header() {
           </a>
         ))}
       </nav>
-      <a className="header-contact" href="mailto:panthercityhelpersfw@gmail.com">
-        <Mail size={17} aria-hidden="true" />
-        Contact
+      <a
+        className="header-contact"
+        href={BOOKING_FORM_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <ClipboardList size={17} aria-hidden="true" />
+        Book Help
       </a>
     </header>
   );

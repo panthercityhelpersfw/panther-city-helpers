@@ -1,6 +1,7 @@
 import {
   Baby,
   BadgeCheck,
+  CalendarCheck,
   Car,
   CheckCircle2,
   ClipboardCheck,
@@ -9,7 +10,6 @@ import {
   Leaf,
   Mail,
   MapPin,
-  MessageCircle,
   ShieldCheck,
   Sparkles,
   Users,
@@ -18,6 +18,7 @@ import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { SectionHeader } from "@/components/section-header";
+import { BOOKING_FORM_URL, CONTACT_EMAIL } from "@/lib/site";
 
 const services = [
   {
@@ -87,7 +88,7 @@ const trustPoints = [
     icon: BadgeCheck,
     title: "Appropriate work only",
     description:
-      "Jobs are kept simple and safe. If something needs an adult professional, we will say so.",
+      "Jobs are kept simple and safe. We do not accept unsafe, fake, or adult-only job requests.",
   },
 ];
 
@@ -122,7 +123,7 @@ const faqs = [
   {
     question: "How do I request help?",
     answer:
-      "A parent or guardian can use the request form or email panthercityhelpersfw@gmail.com with the service, date, neighborhood, and a short description of the job.",
+      "A parent or guardian can use the booking request form or email panthercityhelpersfw@gmail.com with the service, date, neighborhood, and a short description of the job.",
   },
   {
     question: "Are prices listed?",
@@ -152,7 +153,7 @@ const jsonLd = {
   name: "Panther City Helpers",
   description:
     "Fort Worth teen neighborhood helper service offering dog walking, pet sitting, babysitting help, yard work, car washing, and neighbor chores.",
-  email: "panthercityhelpersfw@gmail.com",
+  email: CONTACT_EMAIL,
   areaServed: {
     "@type": "City",
     name: "Fort Worth",
@@ -181,15 +182,20 @@ export default function HomePage() {
               the job before anything is scheduled.
             </p>
             <div className="hero__actions" aria-label="Primary actions">
-              <a className="button button--primary" href="#request-help">
-                Request help
-                <MessageCircle size={18} aria-hidden="true" />
+              <a
+                className="button button--primary"
+                href={BOOKING_FORM_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Book a Local Helper
+                <CalendarCheck size={18} aria-hidden="true" />
               </a>
               <a
                 className="button button--secondary"
-                href="mailto:panthercityhelpersfw@gmail.com"
+                href={`mailto:${CONTACT_EMAIL}`}
               >
-                Email us
+                Email Us
                 <Mail size={18} aria-hidden="true" />
               </a>
             </div>
@@ -304,7 +310,8 @@ export default function HomePage() {
               <p>
                 Panther City Helpers is for helpful neighborhood jobs, not risky
                 work. If a request feels unsafe, too open-ended, or too adult,
-                we will pass on it.
+                we will pass on it. We do not accept unsafe, fake, or
+                adult-only job requests.
               </p>
             </div>
             <div className="unavailable-list">
@@ -352,14 +359,15 @@ export default function HomePage() {
               <p>
                 Parents and guardians should send or approve requests. Share the
                 basics, and we will confirm timing, job details, safety fit, and
-                availability before anything is scheduled.
+                availability before anything is scheduled. The booking form is a
+                request, not an instant confirmation.
               </p>
               <div className="contact-card">
                 <Sparkles size={22} aria-hidden="true" />
                 <div>
                   <strong>Prefer email?</strong>
-                  <a href="mailto:panthercityhelpersfw@gmail.com">
-                    panthercityhelpersfw@gmail.com
+                  <a href={`mailto:${CONTACT_EMAIL}`}>
+                    {CONTACT_EMAIL}
                   </a>
                 </div>
               </div>

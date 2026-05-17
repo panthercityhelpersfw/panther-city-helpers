@@ -33,15 +33,46 @@ There is no lint script currently configured. The production build runs TypeScri
 
 ## Current Contact Form Behavior
 
-The request form is intentionally honest for launch: it validates required fields, then opens the visitor's email app with a prepared message to:
+The public booking CTA sends families to the Jotform request form:
+
+```text
+https://form.jotform.com/261364742198060
+```
+
+The form is a request, not an instant confirmation. Parents or guardians should submit or approve all booking requests.
+
+The email address is used throughout the site:
 
 ```text
 panthercityhelpersfw@gmail.com
 ```
 
-No submission is stored by the site yet.
+The temporary phone placeholder is:
 
-Future backend connection points are documented in `components/contact-form.tsx`. Replace the `mailto:` redirect in `handleSubmit` with one of:
+```text
+Business phone coming soon
+```
+
+TODO: Replace phone placeholder after claiming a free Google Voice number.
+
+Google Voice is the preferred first option if available because it looks more reputable for a parent-facing local service. TextNow is another possible free option.
+
+## Updating Contact Details
+
+Shared launch constants live in:
+
+```text
+lib/site.ts
+```
+
+Update these values there:
+
+- `CONTACT_EMAIL`
+- `BOOKING_FORM_URL`
+- `PHONE_PLACEHOLDER`
+- social links and handles
+
+Future backend connection options if Jotform is replaced later:
 
 - Formspree endpoint
 - Resend email API through a Vercel Server Action or API route
