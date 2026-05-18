@@ -36,7 +36,7 @@ There is no lint script currently configured. The production build runs TypeScri
 The public booking CTA sends families to the Jotform request form:
 
 ```text
-https://form.jotform.com/261364742198060
+https://form.jotform.com/261366743643058
 ```
 
 The form is a request, not an instant confirmation. Parents or guardians should submit or approve all booking requests.
