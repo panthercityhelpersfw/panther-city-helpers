@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     template: "%s | Panther City Helpers",
   },
   description:
-    "Teen-run Fort Worth neighborhood help for dog walking, pet sitting, yard work, car washing, chores, and family-approved simple jobs.",
+    "Panther City Helpers provides dependable local help for car washing, yard work, pet help, garage cleanouts, organizing, and family-approved simple jobs in Fort Worth.",
   keywords: [
     "Panther City Helpers",
     "Panther City Helpers Fort Worth",
@@ -24,10 +24,11 @@ export const metadata: Metadata = {
     "Fort Worth Texas local chores",
     "Fort Worth teen helpers",
     "Fort Worth family approved jobs",
-    "Fort Worth dog walking",
-    "Fort Worth pet sitting",
-    "Fort Worth babysitting",
+    "Fort Worth pet help",
+    "Fort Worth garage cleanouts",
+    "Fort Worth organizing help",
     "Fort Worth yard work",
+    "Fort Worth car washing",
     "Fort Worth chore help",
     "neighborhood helper service",
   ],
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Panther City Helpers | Fort Worth Neighborhood Help",
     description:
-      "Teen-run Fort Worth neighborhood help for dog walking, pet sitting, yard work, car washing, chores, and family-approved simple jobs.",
+      "Dependable local help for car washing, yard work, pet help, garage cleanouts, organizing, and family-approved simple jobs in Fort Worth.",
     type: "website",
     locale: "en_US",
     siteName: "Panther City Helpers",
@@ -53,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Panther City Helpers | Fort Worth Neighborhood Help",
     description:
-      "Teen-run Fort Worth neighborhood help for dog walking, pet sitting, yard work, car washing, chores, and family-approved simple jobs.",
+      "Dependable local help for car washing, yard work, pet help, garage cleanouts, organizing, and family-approved simple jobs in Fort Worth.",
     images: ["/fort-worth-skyline.jpg"],
   },
   robots: {

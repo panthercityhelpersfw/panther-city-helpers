@@ -34,8 +34,8 @@ export function Footer() {
           </span>
         </a>
         <p>
-          Teen-run neighborhood help for parent-approved dog walking, pet
-          sitting, babysitting help, yard work, car washing, and chores.
+          Dependable local help for car washing, yard work, pet help, garage
+          cleanouts, organizing, and family-approved simple jobs in Fort Worth.
         </p>
       </div>
       <div className="footer-contact">

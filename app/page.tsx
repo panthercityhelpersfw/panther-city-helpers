@@ -1,5 +1,4 @@
 import {
-  Baby,
   BadgeCheck,
   CalendarCheck,
   Car,
@@ -22,22 +21,10 @@ import { BOOKING_FORM_URL, CONTACT_EMAIL } from "@/lib/site";
 
 const services = [
   {
-    icon: Dog,
-    title: "Dog walking",
+    icon: Car,
+    title: "Car washing",
     description:
-      "Neighborhood walks, yard let-outs, feeding reminders, and simple check-ins with parent-approved instructions.",
-  },
-  {
-    icon: Home,
-    title: "Pet sitting",
-    description:
-      "Short pet visits for feeding, water, litter or crate checks, and basic care while families are nearby or away for the day.",
-  },
-  {
-    icon: Baby,
-    title: "Babysitting help",
-    description:
-      "Extra help for families who want a responsible teen sitter for appropriate ages, short windows, or parent-approved coverage.",
+      "Driveway washes, window cleaning, quick vacuuming, and interior wipe-downs using family-provided expectations.",
   },
   {
     icon: Leaf,
@@ -46,16 +33,22 @@ const services = [
       "Raking, watering, weeding, bagging leaves, light clean-up, and other simple outdoor jobs around the house.",
   },
   {
-    icon: Car,
-    title: "Car washing",
+    icon: Dog,
+    title: "Pet help",
     description:
-      "Driveway washes, window cleaning, quick vacuuming, and interior wipe-downs using family-provided expectations.",
+      "Friendly pet support like walks, yard let-outs, feeding reminders, water checks, and short parent-approved visits.",
+  },
+  {
+    icon: Home,
+    title: "Garage cleanouts",
+    description:
+      "Sorting, sweeping, moving light boxes, breaking down cardboard, and helping families reset usable garage space.",
   },
   {
     icon: ClipboardCheck,
-    title: "Neighbor chores",
+    title: "Organizing",
     description:
-      "Trash cans, porch sweeping, garage tidying, moving light boxes, organizing, and other safe neighborhood tasks.",
+      "Simple organizing projects for shelves, closets, bins, sports gear, supplies, and everyday household areas.",
   },
 ];
 
@@ -93,12 +86,12 @@ const trustPoints = [
 ];
 
 const goodFirstJobs = [
-  "Walk a friendly dog around the block with clear leash instructions.",
-  "Water plants, pull light weeds, or rake leaves into bags.",
   "Wash a car in the driveway with supplies ready.",
+  "Water plants, pull light weeds, or rake leaves into bags.",
+  "Walk a friendly dog around the block with clear leash instructions.",
+  "Sweep and sort a garage area with light lifting only.",
+  "Organize bins, shelves, sports gear, or supplies with clear instructions.",
   "Bring trash cans up, sweep a porch, or tidy an outdoor area.",
-  "Help organize a garage shelf or move light boxes with an adult nearby.",
-  "Do a short pet check-in for food, water, and basic care notes.",
 ];
 
 const unavailableJobs = [
@@ -133,7 +126,7 @@ const faqs = [
   {
     question: "What kinds of jobs are a good fit?",
     answer:
-      "Simple neighborhood jobs are the best fit: dog walking, pet sitting, babysitting help, yard work, driveway car washing, organizing, trash cans, and similar chores.",
+      "Simple neighborhood jobs are the best fit: car washing, yard work, pet help, garage cleanouts, organizing, trash cans, and similar family-approved chores.",
   },
   {
     question: "Do you serve all of Fort Worth?",
@@ -152,7 +145,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Panther City Helpers",
   description:
-    "Fort Worth teen neighborhood helper service offering dog walking, pet sitting, babysitting help, yard work, car washing, and neighbor chores.",
+    "Fort Worth teen neighborhood helper service offering car washing, yard work, pet help, garage cleanouts, organizing, and family-approved simple jobs.",
   email: CONTACT_EMAIL,
   areaServed: {
     "@type": "City",
@@ -176,10 +169,10 @@ export default function HomePage() {
             <p className="eyebrow">Fort Worth teen neighborhood helpers</p>
             <h1>Trusted extra hands for busy Panther City families.</h1>
             <p className="hero__lede">
-              Panther City Helpers is a teen-run Fort Worth service for simple
-              neighborhood help: dog walking, pet sitting, babysitting help,
-              yard work, car washing, and chores. Parents and guardians approve
-              the job before anything is scheduled.
+              Panther City Helpers provides dependable local help for car
+              washing, yard work, pet help, garage cleanouts, organizing, and
+              family-approved simple jobs. Parents and guardians approve the job
+              before anything is scheduled.
             </p>
             <div className="hero__actions" aria-label="Primary actions">
               <a
@@ -201,7 +194,7 @@ export default function HomePage() {
             </div>
             <dl className="hero__stats" aria-label="Service highlights">
               <div>
-                <dt>6</dt>
+                <dt>5</dt>
                 <dd>simple services</dd>
               </div>
               <div>
