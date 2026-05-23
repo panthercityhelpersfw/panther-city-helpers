@@ -23,30 +23,35 @@ const services = [
   {
     icon: Car,
     title: "Car washing",
+    meta: "Driveway-ready",
     description:
       "Driveway washes, window cleaning, quick vacuuming, and interior wipe-downs using family-provided expectations.",
   },
   {
     icon: Leaf,
     title: "Yard work",
+    meta: "Light outdoor jobs",
     description:
       "Raking, watering, weeding, bagging leaves, light clean-up, and other simple outdoor jobs around the house.",
   },
   {
     icon: Dog,
     title: "Pet help",
+    meta: "Parent-approved care",
     description:
       "Friendly pet support like walks, yard let-outs, feeding reminders, water checks, and short parent-approved visits.",
   },
   {
     icon: Home,
     title: "Garage cleanouts",
+    meta: "Simple resets",
     description:
       "Sorting, sweeping, moving light boxes, breaking down cardboard, and helping families reset usable garage space.",
   },
   {
     icon: ClipboardCheck,
     title: "Organizing",
+    meta: "Tidy, practical help",
     description:
       "Simple organizing projects for shelves, closets, bins, sports gear, supplies, and everyday household areas.",
   },
@@ -112,6 +117,12 @@ const serviceAreas = [
   "Nearby areas by request",
 ];
 
+const quickProof = [
+  "Request first, confirmation second",
+  "Parent or guardian approval expected",
+  "Unsafe or adult-only jobs declined",
+];
+
 const faqs = [
   {
     question: "How do I request help?",
@@ -167,7 +178,7 @@ export default function HomePage() {
         <section className="hero" id="home">
           <div className="hero__content">
             <p className="eyebrow">Fort Worth teen neighborhood helpers</p>
-            <h1>Trusted extra hands for busy Panther City families.</h1>
+            <h1>Reliable local help for the jobs that keep piling up.</h1>
             <p className="hero__lede">
               Panther City Helpers provides dependable local help for car
               washing, yard work, pet help, garage cleanouts, organizing, and
@@ -192,6 +203,13 @@ export default function HomePage() {
                 <Mail size={18} aria-hidden="true" />
               </a>
             </div>
+            <div className="hero__notice" role="note">
+              <ShieldCheck size={19} aria-hidden="true" />
+              <span>
+                The booking form is a request, not an instant confirmation.
+                Every job is reviewed for fit and safety.
+              </span>
+            </div>
             <dl className="hero__stats" aria-label="Service highlights">
               <div>
                 <dt>5</dt>
@@ -215,23 +233,33 @@ export default function HomePage() {
             <div className="hero__mediaPanel" aria-label="Available help">
               <CheckCircle2 size={22} aria-hidden="true" />
               <div>
-                <strong>Available for one-time or recurring help</strong>
-                <span>Simple neighborhood tasks, approved by parents.</span>
+                <strong>Built for nearby, practical help</strong>
+                <span>Simple requests, clear boundaries, local follow-up.</span>
               </div>
             </div>
           </div>
         </section>
 
+        <section className="proof-strip" aria-label="Booking safeguards">
+          {quickProof.map((item) => (
+            <div key={item}>
+              <CheckCircle2 size={18} aria-hidden="true" />
+              <span>{item}</span>
+            </div>
+          ))}
+        </section>
+
         <section className="section section--cream" id="services">
           <SectionHeader
             eyebrow="Services"
-            title="Straightforward help close to home"
-            description="These are everyday jobs that make sense for responsible teens and busy Fort Worth families. Nothing overcomplicated, nothing vague."
+            title="Straightforward help, booked the right way"
+            description="Pick the kind of help you need, send the request, and we will confirm whether the job is a good fit before scheduling."
           />
           <div className="service-grid">
             {services.map((service) => (
               <article className="service-card" key={service.title}>
                 <service.icon size={26} aria-hidden="true" />
+                <span className="service-card__meta">{service.meta}</span>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
               </article>
@@ -243,8 +271,8 @@ export default function HomePage() {
           <div className="split">
             <SectionHeader
               eyebrow="How it works"
-              title="Simple scheduling, clear expectations"
-              description="The request starts with an adult contact, clear notes, and a quick check that the job is appropriate for a teen helper."
+              title="A cleaner request process for families"
+              description="The new booking form collects the important details up front, so follow-up is faster and expectations are clearer."
             />
             <div className="step-list">
               {steps.map((step, index) => (
@@ -348,7 +376,7 @@ export default function HomePage() {
           <div className="request-layout">
             <div>
               <p className="eyebrow">Request help</p>
-              <h2>Tell us what would make your week easier.</h2>
+              <h2>Send the request through the new booking form.</h2>
               <p>
                 Parents and guardians should send or approve requests. Share the
                 basics, and we will confirm timing, job details, safety fit, and

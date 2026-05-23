@@ -1,5 +1,5 @@
 export const CONTACT_EMAIL = "panthercityhelpersfw@gmail.com";
-export const BOOKING_FORM_URL = "https://form.jotform.com/261366743643058";
+export const BOOKING_FORM_URL = "https://forms.fillout.com/t/oiRvQbsxvmus";
 export const PHONE_PLACEHOLDER = "Business phone coming soon";
 
 // TODO: Replace phone placeholder after claiming a free Google Voice number.

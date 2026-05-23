@@ -52,7 +52,7 @@ export function ContactForm() {
       <div className="form-heading">
         <h3>Request help</h3>
         <p>
-          The booking form sends a request, not an instant confirmation. A
+          The new Fillout form sends a request, not an instant confirmation. A
           parent or guardian should submit or approve the request.
         </p>
       </div>
@@ -63,7 +63,7 @@ export function ContactForm() {
         target="_blank"
         rel="noreferrer"
       >
-        Open booking request form
+        Open the Fillout request form
         <CalendarCheck size={18} aria-hidden="true" />
       </a>
 
@@ -82,7 +82,11 @@ export function ContactForm() {
             <div>
               <span>{row.label}</span>
               {row.href ? (
-                <a href={row.href} target={row.href.startsWith("http") ? "_blank" : undefined} rel={row.href.startsWith("http") ? "noreferrer" : undefined}>
+                <a
+                  href={row.href}
+                  target={row.href.startsWith("http") ? "_blank" : undefined}
+                  rel={row.href.startsWith("http") ? "noreferrer" : undefined}
+                >
                   {row.value}
                 </a>
               ) : (
