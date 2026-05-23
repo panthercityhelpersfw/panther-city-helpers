@@ -611,6 +611,60 @@ h3 {
   background: var(--paper);
 }
 
+.checklist-section {
+  background:
+    linear-gradient(180deg, rgba(245, 239, 227, 0.78), rgba(255, 253, 247, 0.98)),
+    var(--paper);
+}
+
+.checklist-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1fr);
+  gap: clamp(34px, 6vw, 80px);
+  max-width: 1220px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.checklist-layout > div:first-child p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
+.checklist-button {
+  margin-top: 18px;
+}
+
+.checklist-grid {
+  display: grid;
+  gap: 12px;
+}
+
+.checklist-card {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  padding: 18px;
+  background: var(--paper);
+  border: 1px solid rgba(8, 22, 37, 0.1);
+  border-radius: 6px;
+  box-shadow: var(--soft-shadow);
+}
+
+.checklist-card svg {
+  margin-top: 2px;
+  color: var(--green);
+}
+
+.checklist-card h3 {
+  margin-bottom: 5px;
+}
+
+.checklist-card p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 .boundary-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(360px, 1fr);
@@ -1016,6 +1070,10 @@ details p {
   border-color: rgba(255, 253, 248, 0.5);
 }
 
+.mobile-booking {
+  display: none;
+}
+
 @media (max-width: 1080px) {
   .site-header {
     align-items: flex-start;
@@ -1029,6 +1087,7 @@ details p {
   .split,
   .area-layout,
   .request-layout,
+  .checklist-layout,
   .boundary-layout {
     grid-template-columns: 1fr;
   }
@@ -1143,5 +1202,24 @@ details p {
 
   .footer-handles {
     justify-items: start;
+  }
+
+  .mobile-booking {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 30;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 48px;
+    padding: 0 16px;
+    background: var(--gold);
+    color: white;
+    border: 1px solid rgba(255, 253, 247, 0.38);
+    border-radius: 4px;
+    box-shadow: 0 16px 42px rgba(8, 22, 37, 0.28);
+    font-weight: 850;
   }
 }

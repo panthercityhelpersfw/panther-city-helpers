@@ -123,6 +123,29 @@ const quickProof = [
   "Unsafe or adult-only jobs declined",
 ];
 
+const requestChecklist = [
+  {
+    title: "Where the job is",
+    description:
+      "Neighborhood, nearest major cross street, and whether the helper should meet at the front door, driveway, or yard.",
+  },
+  {
+    title: "What needs to be done",
+    description:
+      "A simple task list, supplies available, pets involved, and any areas that are off limits.",
+  },
+  {
+    title: "When you need help",
+    description:
+      "Preferred day, time window, whether the timing is flexible, and how long you expect the job to take.",
+  },
+  {
+    title: "Who is approving it",
+    description:
+      "Parent or guardian contact info, safety notes, and anything the family wants confirmed before scheduling.",
+  },
+];
+
 const faqs = [
   {
     question: "How do I request help?",
@@ -323,6 +346,40 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="section checklist-section" id="request-checklist">
+          <div className="checklist-layout">
+            <div>
+              <p className="eyebrow">Before you book</p>
+              <h2>Better details make better jobs.</h2>
+              <p>
+                A clear request helps us quickly tell whether the job is safe,
+                realistic, and a good fit for a teen helper. These notes also
+                reduce back-and-forth for parents.
+              </p>
+              <a
+                className="button button--primary checklist-button"
+                href={BOOKING_FORM_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Start the request
+                <CalendarCheck size={18} aria-hidden="true" />
+              </a>
+            </div>
+            <div className="checklist-grid">
+              {requestChecklist.map((item) => (
+                <article className="checklist-card" key={item.title}>
+                  <CheckCircle2 size={20} aria-hidden="true" />
+                  <div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <section className="section boundary-section" id="not-available">
           <div className="boundary-layout">
             <div>
@@ -414,6 +471,15 @@ export default function HomePage() {
         </section>
       </main>
       <Footer />
+      <a
+        className="mobile-booking"
+        href={BOOKING_FORM_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
+        Book Help
+        <CalendarCheck size={18} aria-hidden="true" />
+      </a>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
