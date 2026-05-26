@@ -1,17 +1,19 @@
 import {
   BadgeCheck,
+  Boxes,
   CalendarCheck,
-  Car,
+  Cable,
   CheckCircle2,
   ClipboardCheck,
-  Dog,
+  Hammer,
   Home,
-  Leaf,
+  Lightbulb,
   Mail,
   MapPin,
+  MonitorCog,
   ShieldCheck,
   Sparkles,
-  Users,
+  Wrench,
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
@@ -21,89 +23,89 @@ import { BOOKING_FORM_URL, CONTACT_EMAIL } from "@/lib/site";
 
 const services = [
   {
-    icon: Car,
-    title: "Car washing",
-    meta: "Driveway-ready",
+    icon: Boxes,
+    title: "Garage systems",
+    meta: "Storage that works",
     description:
-      "Driveway washes, window cleaning, quick vacuuming, and interior wipe-downs using family-provided expectations.",
+      "Shelving, storage zones, tool walls, workbench setup, and garage resets that make everyday gear easier to use.",
   },
   {
-    icon: Leaf,
-    title: "Yard work",
-    meta: "Light outdoor jobs",
+    icon: Wrench,
+    title: "Small repairs",
+    meta: "Fix the nagging stuff",
     description:
-      "Raking, watering, weeding, bagging leaves, light clean-up, and other simple outdoor jobs around the house.",
+      "Simple fixes, adjustments, tightening, diagnostics, and repair research for non-licensed household issues.",
   },
   {
-    icon: Dog,
-    title: "Pet help",
-    meta: "Parent-approved care",
+    icon: MonitorCog,
+    title: "Tech and smart setup",
+    meta: "Devices, cables, rooms",
     description:
-      "Friendly pet support like walks, yard let-outs, feeding reminders, water checks, and short parent-approved visits.",
+      "Smart home setup, device basics, cable management, LED strips, desk layouts, and tidier room utility systems.",
   },
   {
-    icon: Home,
-    title: "Garage cleanouts",
-    meta: "Simple resets",
+    icon: Hammer,
+    title: "Assembly and builds",
+    meta: "Useful things finished",
     description:
-      "Sorting, sweeping, moving light boxes, breaking down cardboard, and helping families reset usable garage space.",
+      "Furniture, desks, workbenches, planter boxes, patio lights, outdoor utility builds, and small fix/build projects.",
   },
   {
-    icon: ClipboardCheck,
-    title: "Organizing",
-    meta: "Tidy, practical help",
+    icon: Lightbulb,
+    title: "Upgrade projects",
+    meta: "Improve the system",
     description:
-      "Simple organizing projects for shelves, closets, bins, sports gear, supplies, and everyday household areas.",
+      "Practical upgrades for garages, rooms, patios, workshops, and home systems people keep meaning to finish.",
   },
 ];
 
 const steps = [
-  "A parent or guardian sends the request with the job, area, timing, and notes.",
-  "We confirm whether the job is a good fit and make sure an adult has approved it.",
-  "The helper shows up prepared, follows the agreed instructions, and checks out when finished.",
+  "Send the project request with photos, measurements, the goal, and what already exists.",
+  "We review scope, tools, safety, and whether the job fits our current repair/build skill level.",
+  "If it fits, we confirm the plan, show up prepared, and work through the setup, build, or upgrade.",
 ];
 
 const trustPoints = [
   {
     icon: ShieldCheck,
-    title: "Parents approve the job",
+    title: "Scope before scheduling",
     description:
-      "Requests should come from a parent or guardian, or be approved by one before anything is scheduled.",
+      "Every request is reviewed before scheduling so the project is clear, realistic, and safe.",
   },
   {
     icon: ClipboardCheck,
-    title: "Clear task expectations",
+    title: "Honest skill level",
     description:
-      "Families can share instructions up front so everyone understands the job, timing, supplies, and boundaries.",
-  },
-  {
-    icon: Users,
-    title: "Teen-run and neighborly",
-    description:
-      "This is local Fort Worth help from teens learning responsibility, communication, and good work habits.",
+      "We do not claim to be certified electricians, plumbers, appliance technicians, or licensed trades.",
   },
   {
     icon: BadgeCheck,
-    title: "Appropriate work only",
+    title: "Practical problem solvers",
     description:
-      "Jobs are kept simple and safe. We do not accept unsafe, fake, or adult-only job requests.",
+      "The focus is hands-on setup, diagnostics, small repairs, useful builds, and project follow-through.",
+  },
+  {
+    icon: Wrench,
+    title: "Learning in public",
+    description:
+      "Some content may show appliance or tech diagnostics as learning content, not certified repair service.",
   },
 ];
 
 const goodFirstJobs = [
-  "Wash a car in the driveway with supplies ready.",
-  "Water plants, pull light weeds, or rake leaves into bags.",
-  "Walk a friendly dog around the block with clear leash instructions.",
-  "Sweep and sort a garage area with light lifting only.",
-  "Organize bins, shelves, sports gear, or supplies with clear instructions.",
-  "Bring trash cans up, sweep a porch, or tidy an outdoor area.",
+  "Build a garage shelf layout and label storage zones.",
+  "Set up a tool wall, pegboard, or workbench area.",
+  "Assemble a desk, furniture piece, workbench, or utility cart.",
+  "Clean up LED strips, chargers, extension cords, and cable runs.",
+  "Install patio lights, planter boxes, hooks, bins, or simple outdoor utility pieces.",
+  "Troubleshoot a basic appliance, device, or setup issue as diagnostics and learning content.",
 ];
 
 const unavailableJobs = [
-  "Dangerous jobs involving ladders, roofs, power tools, chemicals, or heavy lifting.",
-  "Overnight work or jobs that require a teen to be the only responsible person for too long.",
-  "Transportation-heavy work, driving errands, or rides for children.",
-  "Medical care, pool supervision, or anything that should be handled by an adult professional.",
+  "Electrical, plumbing, HVAC, gas, structural, roofing, or other licensed-trade work.",
+  "Major appliance repair claims, warranty work, or anything presented as certified technician service.",
+  "Dangerous jobs involving roofs, tall ladders, hazardous chemicals, heavy lifts, or unsafe tools.",
+  "Emergency repairs, adult-only responsibility, or projects where the safe answer is to call a pro.",
 ];
 
 const serviceAreas = [
@@ -118,31 +120,31 @@ const serviceAreas = [
 ];
 
 const quickProof = [
-  "Request first, confirmation second",
-  "Parent or guardian approval expected",
-  "Unsafe or adult-only jobs declined",
+  "Repair • Build • Upgrade",
+  "Scope reviewed before scheduling",
+  "Licensed-trade work declined",
 ];
 
 const requestChecklist = [
   {
-    title: "Where the job is",
+    title: "Photos of the current setup",
     description:
-      "Neighborhood, nearest major cross street, and whether the helper should meet at the front door, driveway, or yard.",
+      "Show the garage, room, device, wall, patio, storage area, or system you want improved.",
   },
   {
-    title: "What needs to be done",
+    title: "The outcome you want",
     description:
-      "A simple task list, supplies available, pets involved, and any areas that are off limits.",
+      "Tell us whether you want it repaired, built, installed, organized, diagnosed, or upgraded.",
   },
   {
-    title: "When you need help",
+    title: "Parts, tools, and measurements",
     description:
-      "Preferred day, time window, whether the timing is flexible, and how long you expect the job to take.",
+      "Include what you already bought, what tools are available, measurements, and any product links.",
   },
   {
-    title: "Who is approving it",
+    title: "Safety and limits",
     description:
-      "Parent or guardian contact info, safety notes, and anything the family wants confirmed before scheduling.",
+      "Mention anything electrical, plumbing, heavy, high, sharp, or risky so we can decline or redirect if needed.",
   },
 ];
 
@@ -150,27 +152,27 @@ const faqs = [
   {
     question: "How do I request help?",
     answer:
-      "A parent or guardian can use the booking request form or email panthercityhelpersfw@gmail.com with the service, date, neighborhood, and a short description of the job.",
+      "Use the project request form or email panthercityhelpersfw@gmail.com with photos, the goal, measurements, timing, and any safety notes.",
   },
   {
     question: "Are prices listed?",
     answer:
-      "Not yet. Jobs vary by time, distance, task size, and supplies. Panther City Helpers can provide a clear starting estimate before anything is scheduled.",
+      "Not yet. Project scope, tools, parts, distance, and time can vary. Panther City Helpers can provide a clear starting estimate before anything is scheduled.",
   },
   {
     question: "What kinds of jobs are a good fit?",
     answer:
-      "Simple neighborhood jobs are the best fit: car washing, yard work, pet help, garage cleanouts, organizing, trash cans, and similar family-approved chores.",
+      "Good fits include garage systems, shelving, tool walls, workbench setup, furniture assembly, cable management, smart home setup, LED installs, planter boxes, patio lights, and small fix/build projects.",
   },
   {
     question: "Do you serve all of Fort Worth?",
     answer:
-      "The service focuses on Fort Worth neighborhoods first. Nearby areas can be considered based on timing, transportation, and helper availability.",
+      "The service focuses on Fort Worth first. Nearby areas can be considered based on project scope, timing, transportation, and availability.",
   },
   {
-    question: "Can parents coordinate directly?",
+    question: "Do you handle licensed trade work?",
     answer:
-      "Yes. Parents and guardians should be the main point of contact for requests, approval, directions, and any safety details.",
+      "No. We do not present ourselves as certified electricians, plumbers, HVAC techs, appliance technicians, or licensed contractors. If a project needs a pro, we will say so.",
   },
 ];
 
@@ -179,7 +181,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Panther City Helpers",
   description:
-    "Fort Worth teen neighborhood helper service offering car washing, yard work, pet help, garage cleanouts, organizing, and family-approved simple jobs.",
+    "Fort Worth repair, build, setup, and upgrade help for garages, rooms, tech, outdoor spaces, and everyday home systems.",
   email: CONTACT_EMAIL,
   areaServed: {
     "@type": "City",
@@ -200,13 +202,12 @@ export default function HomePage() {
       <main>
         <section className="hero" id="home">
           <div className="hero__content">
-            <p className="eyebrow">Fort Worth teen neighborhood helpers</p>
-            <h1>Reliable local help for the jobs that keep piling up.</h1>
+            <p className="eyebrow">Repair • Build • Upgrade</p>
+            <h1>Fort Worth help for useful projects that need finishing.</h1>
             <p className="hero__lede">
-              Panther City Helpers provides dependable local help for car
-              washing, yard work, pet help, garage cleanouts, organizing, and
-              family-approved simple jobs. Parents and guardians approve the job
-              before anything is scheduled.
+              Panther City Helpers helps people fix, build, set up, and improve
+              everyday systems around homes, garages, rooms, tech, workshops,
+              and outdoor spaces.
             </p>
             <div className="hero__actions" aria-label="Primary actions">
               <a
@@ -215,7 +216,7 @@ export default function HomePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Book a Local Helper
+                Request a Project
                 <CalendarCheck size={18} aria-hidden="true" />
               </a>
               <a
@@ -229,22 +230,22 @@ export default function HomePage() {
             <div className="hero__notice" role="note">
               <ShieldCheck size={19} aria-hidden="true" />
               <span>
-                The booking form is a request, not an instant confirmation.
-                Every job is reviewed for fit and safety.
+                We help with practical projects, not licensed trade work. Every
+                request is reviewed for scope, safety, and fit before scheduling.
               </span>
             </div>
             <dl className="hero__stats" aria-label="Service highlights">
               <div>
                 <dt>5</dt>
-                <dd>simple services</dd>
+                <dd>project lanes</dd>
               </div>
               <div>
                 <dt>FW</dt>
                 <dd>local focus</dd>
               </div>
               <div>
-                <dt>Adult</dt>
-                <dd>approval expected</dd>
+                <dt>Scope</dt>
+                <dd>review first</dd>
               </div>
             </dl>
           </div>
@@ -256,8 +257,8 @@ export default function HomePage() {
             <div className="hero__mediaPanel" aria-label="Available help">
               <CheckCircle2 size={22} aria-hidden="true" />
               <div>
-                <strong>Built for nearby, practical help</strong>
-                <span>Simple requests, clear boundaries, local follow-up.</span>
+                <strong>Built for practical project follow-through</strong>
+                <span>Setups, repairs, builds, diagnostics, and upgrades.</span>
               </div>
             </div>
           </div>
@@ -275,8 +276,8 @@ export default function HomePage() {
         <section className="section section--cream" id="services">
           <SectionHeader
             eyebrow="Services"
-            title="Straightforward help, booked the right way"
-            description="Pick the kind of help you need, send the request, and we will confirm whether the job is a good fit before scheduling."
+            title="Repair, build, setup, and upgrade work"
+            description="The first impression should be simple: useful projects, practical systems, honest scope, and no fake trade claims."
           />
           <div className="service-grid">
             {services.map((service) => (
@@ -294,8 +295,8 @@ export default function HomePage() {
           <div className="split">
             <SectionHeader
               eyebrow="How it works"
-              title="A cleaner request process for families"
-              description="The new booking form collects the important details up front, so follow-up is faster and expectations are clearer."
+              title="A better way to finish stuck projects"
+              description="The request form collects photos, measurements, parts, goals, and safety notes so we can decide whether the project is a fit."
             />
             <div className="step-list">
               {steps.map((step, index) => (
@@ -312,8 +313,8 @@ export default function HomePage() {
           <div className="section__inner">
             <SectionHeader
               eyebrow="Trust"
-              title="Built around parent approval"
-              description="Panther City Helpers is teen-run, but jobs should be requested, approved, and understood by a parent or guardian before anyone shows up."
+              title="Useful help, honest boundaries"
+              description="Panther City Helpers is evolving into a practical repair, build, setup, and upgrade brand. We stay clear about what we can and cannot do."
               inverted
             />
             <div className="trust-grid">
@@ -332,8 +333,8 @@ export default function HomePage() {
           <div className="jobs-layout">
             <SectionHeader
               eyebrow="Good first jobs"
-              title="Safe, simple tasks are the sweet spot"
-              description="The best requests are specific, local, and easy to explain. A good job has a clear start, clear finish, and an adult who knows what is happening."
+              title="Good project lanes to start with"
+              description="The best requests have a visible problem, a practical goal, and a clear finish line. These are the kinds of jobs that fit the new direction."
             />
             <div className="jobs-grid">
               {goodFirstJobs.map((job) => (
@@ -350,11 +351,11 @@ export default function HomePage() {
           <div className="checklist-layout">
             <div>
               <p className="eyebrow">Before you book</p>
-              <h2>Better details make better jobs.</h2>
+              <h2>Send the details that make a project possible.</h2>
               <p>
-                A clear request helps us quickly tell whether the job is safe,
-                realistic, and a good fit for a teen helper. These notes also
-                reduce back-and-forth for parents.
+                A clear request helps us see the system, understand the goal,
+                and decide whether the project is safe and realistic. Photos are
+                especially useful.
               </p>
               <a
                 className="button button--primary checklist-button"
@@ -386,10 +387,10 @@ export default function HomePage() {
               <p className="eyebrow">Not available for</p>
               <h2>Some work belongs with adults or professionals.</h2>
               <p>
-                Panther City Helpers is for helpful neighborhood jobs, not risky
-                work. If a request feels unsafe, too open-ended, or too adult,
-                we will pass on it. We do not accept unsafe, fake, or
-                adult-only job requests.
+                Panther City Helpers is for practical setup, repair, build, and
+                upgrade projects. If a request needs a licensed professional, is
+                unsafe, or is outside our current skill level, we will pass on
+                it or recommend calling a pro.
               </p>
             </div>
             <div className="unavailable-list">
@@ -409,15 +410,15 @@ export default function HomePage() {
               <p className="eyebrow">Service area</p>
               <h2>Local to Fort Worth, TX</h2>
               <p>
-                Panther City Helpers focuses on nearby Fort Worth neighborhoods
-                where jobs can be coordinated clearly and safely. If you are
-                close by, send the request and we can confirm whether it works.
+                Panther City Helpers focuses on Fort Worth projects that can be
+                coordinated clearly and safely. Nearby areas can be considered
+                when the scope and timing make sense.
               </p>
               <div className="area-note">
                 <MapPin size={22} aria-hidden="true" />
                 <span>
                   Include your neighborhood or nearest major intersection in the
-                  request form so we can check whether the job is realistic.
+                  request form so we can check whether the project is realistic.
                 </span>
               </div>
             </div>
@@ -433,12 +434,12 @@ export default function HomePage() {
           <div className="request-layout">
             <div>
               <p className="eyebrow">Request help</p>
-              <h2>Send the request through the new booking form.</h2>
+              <h2>Send the project through the booking form.</h2>
               <p>
-                Parents and guardians should send or approve requests. Share the
-                basics, and we will confirm timing, job details, safety fit, and
-                availability before anything is scheduled. The booking form is a
-                request, not an instant confirmation.
+                Share the problem, the goal, photos, parts, measurements, and
+                timing. We will review fit, safety, and availability before
+                anything is scheduled. The booking form is a request, not an
+                instant confirmation.
               </p>
               <div className="contact-card">
                 <Sparkles size={22} aria-hidden="true" />

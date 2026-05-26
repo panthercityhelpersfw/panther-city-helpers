@@ -1,6 +1,6 @@
 # Panther City Helpers
 
-Trust-focused Next.js site for Panther City Helpers, a teen-run Fort Worth neighborhood helper service.
+Trust-focused Next.js site for Panther City Helpers, a Fort Worth repair, build, setup, and upgrade brand.
 
 ## Tech Stack
 
@@ -33,13 +33,13 @@ There is no lint script currently configured. The production build runs TypeScri
 
 ## Current Contact Form Behavior
 
-The public booking CTA sends families to the Fillout request form:
+The public booking CTA sends project requests to the Fillout request form:
 
 ```text
 https://forms.fillout.com/t/oiRvQbsxvmus
 ```
 
-The form is a request, not an instant confirmation. Parents or guardians should submit or approve all booking requests.
+The form is a request, not an instant confirmation. Panther City Helpers reviews scope, safety, tools, and fit before scheduling.
 
 The email address is used throughout the site:
 
@@ -79,6 +79,22 @@ Future backend connection options if Jotform is replaced later:
 - Supabase table insert
 - Firebase/Firestore write
 - Native Vercel Server Action
+
+## Brand Direction
+
+Current positioning:
+
+```text
+Repair • Build • Upgrade
+```
+
+Panther City Helpers should be framed as practical Fort Worth help for repairs, builds, setups, diagnostics, garage systems, workshop upgrades, tech utility setup, and useful small projects. Do not frame the brand as cleaners, maid service, lawn care only, basic chores, or random teen labor.
+
+Social bios, a pinned evolution post, and content ideas live in:
+
+```text
+docs/social-repositioning.md
+```
 
 Add any required keys in Vercel Project Settings under Environment Variables.
 

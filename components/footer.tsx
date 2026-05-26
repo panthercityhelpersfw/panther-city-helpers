@@ -30,12 +30,12 @@ export function Footer() {
           <span className="brand__mark">PCH</span>
           <span>
             <strong>Panther City Helpers</strong>
-            <small>Responsible teen help in Fort Worth</small>
+            <small>Repair • Build • Upgrade</small>
           </span>
         </a>
         <p>
-          Dependable local help for car washing, yard work, pet help, garage
-          cleanouts, organizing, and family-approved simple jobs in Fort Worth.
+          Fort Worth help for repairs, builds, setups, garage systems, tech
+          utility projects, and everyday upgrades.
         </p>
       </div>
       <div className="footer-contact">

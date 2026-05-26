@@ -4,8 +4,8 @@ import { BOOKING_FORM_URL } from "@/lib/site";
 const navItems = [
   { label: "Services", href: "#services" },
   { label: "How it works", href: "#how-it-works" },
-  { label: "Safety", href: "#trust" },
-  { label: "Good jobs", href: "#good-first-jobs" },
+  { label: "Standards", href: "#trust" },
+  { label: "Projects", href: "#good-first-jobs" },
   { label: "Area", href: "#service-area" },
   { label: "FAQ", href: "#faq" },
 ];

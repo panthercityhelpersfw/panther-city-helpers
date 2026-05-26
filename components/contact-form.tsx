@@ -50,10 +50,11 @@ export function ContactForm() {
   return (
     <div className="request-form contact-panel">
       <div className="form-heading">
-        <h3>Request help</h3>
+        <h3>Request a project</h3>
         <p>
-          The new Fillout form sends a request, not an instant confirmation. A
-          parent or guardian should submit or approve the request.
+          The Fillout form sends a project request, not an instant confirmation.
+          We review scope, safety, tools, and whether the job fits our current
+          skill level.
         </p>
       </div>
 
@@ -63,15 +64,15 @@ export function ContactForm() {
         target="_blank"
         rel="noreferrer"
       >
-        Open the Fillout request form
+        Open the project request form
         <CalendarCheck size={18} aria-hidden="true" />
       </a>
 
       <div className="form-summary">
         <ShieldCheck size={19} aria-hidden="true" />
         <p>
-          We review requests before scheduling. We do not accept unsafe, fake,
-          or adult-only job requests.
+          We handle practical setup, repair, build, and upgrade work. We do not
+          accept unsafe, fake, licensed-trade, or adult-only job requests.
         </p>
       </div>
 
