@@ -1,20 +1,20 @@
-# Panther City Helpers Social Repositioning
+# Panther City Helpers Social Direction
 
 Business name stays: Panther City Helpers.
 
 Core identity:
 
 ```text
-Repair • Build • Upgrade
+Painting - Cleaning - Home Refresh
 ```
 
 Positioning:
 
 ```text
-Fort Worth help for repairs, builds, setups, and upgrades.
+Fort Worth help for interior painting, deep cleaning, garage cleanouts, house number painting, and small home refresh jobs.
 ```
 
-Do not frame the brand as cleaning, lawn care only, maid service, generic chores, or random teen labor. Frame it as practical problem solving for useful projects around garages, rooms, tech, outdoor spaces, and everyday home systems.
+Keep the brand bold, direct, local, and homeowner-friendly. Do not add fake reviews, fake certifications, or claims that the business does every kind of home repair.
 
 ## Bio Options
 
@@ -22,123 +22,95 @@ Do not frame the brand as cleaning, lawn care only, maid service, generic chores
 
 ```text
 Panther City Helpers
-Repair • Build • Upgrade
-Fort Worth help for garage systems, setups, small fixes, builds, and everyday upgrades.
-Project requests ↓
+Painting - Cleaning - Home Refresh
+Fort Worth, TX
+Quality work. Honest pricing.
+Free quotes below.
 ```
 
 Shorter version:
 
 ```text
-Repair • Build • Upgrade
-Fort Worth setups, small fixes, garage systems, builds, and useful home upgrades.
-Project requests ↓
+Painting - Cleaning - Home Refresh
+Fort Worth home refresh jobs, garage cleanouts, house numbers, and more.
+Free quotes below.
 ```
 
 ### TikTok
 
 ```text
-Repair • Build • Upgrade
-Fort Worth garage, tech, setup, build, and small-fix projects.
-Learning, building, improving.
+Painting - Cleaning - Home Refresh
+Fort Worth, TX
+Before/after home projects, garage resets, deep cleans, and house number painting.
 ```
 
 ### Facebook
 
 ```text
-Panther City Helpers helps Fort Worth homeowners repair, build, set up, and upgrade everyday systems around garages, rooms, tech, workshops, and outdoor spaces.
+Panther City Helpers provides Fort Worth home refresh services including interior painting, deep cleaning, garage cleanouts, garage organization, house number painting, and small refresh jobs.
 
-We focus on practical projects: garage systems, shelving, tool walls, workbench setup, small repairs, smart home setup, LED and cable management, furniture assembly, planter boxes, patio lights, and useful upgrades.
-
-We do not claim to be certified electricians, plumbers, appliance technicians, or licensed contractors. If a project needs a pro, we will say so.
+Quality work. Honest pricing. Local service.
 ```
 
-## Pinned Evolution Post
+## Pinned Brand Post
 
 Caption:
 
 ```text
-Panther City Helpers is evolving.
+Panther City Helpers is focused on home refresh work around Fort Worth.
 
-We are still Panther City Helpers, but the direction is getting sharper:
+Painting - Cleaning - Home Refresh
 
-Repair • Build • Upgrade
+We are taking on practical projects that make a space look better, feel cleaner, and work better:
+- interior painting
+- deep cleaning
+- garage cleanouts
+- garage refresh and organization
+- house number painting
+- small home refresh jobs
 
-We are focusing on practical projects around Fort Worth homes, garages, rooms, tech setups, workshops, and outdoor spaces.
+We are not here to claim we do everything.
+We are here to do clear, useful jobs with quality work and honest pricing.
 
-That means more:
-- garage systems
-- shelving and storage setup
-- tool walls
-- workbench setup
-- small fixes
-- smart home setup
-- LED and cable management
-- furniture, desk, and workbench assembly
-- planter boxes
-- patio lights
-- practical upgrades people keep putting off
-
-We are not trying to look like certified electricians, plumbers, appliance techs, or licensed contractors. We are learning, building, diagnosing, improving, and taking on projects that fit our current skill level.
-
-If something needs a pro, we will say so.
-
-If it is practical, useful, and safe, send it our way.
-
-Fort Worth, let us help you fix, build, and upgrade the stuff you keep meaning to finish.
+Send a quote request when your space needs a reset.
 ```
 
-Video script:
+Short video script:
 
 ```text
-Panther City Helpers is changing direction.
+Panther City Helpers is moving in a sharper direction:
 
-We are not just doing random chores.
-We are building toward something more useful:
+Painting.
+Cleaning.
+Home Refresh.
 
-Repair. Build. Upgrade.
+Interior painting.
+Deep cleaning.
+Garage cleanouts.
+House number painting.
+Small projects that make a real before-and-after difference.
 
-Garage systems.
-Shelving.
-Tool walls.
-Workbench setups.
-Small fixes.
-Tech and smart home setup.
-LEDs and cable management.
-Furniture builds.
-Planter boxes.
-Patio lights.
-Projects people keep putting off.
-
-We are not claiming to be licensed pros.
-We are learning, building, and taking on practical projects that fit our skill level.
-
-If it needs a certified electrician, plumber, or technician, we will say that.
-
-But if it is a useful setup, repair, build, or upgrade around the house, garage, room, or patio, that is the direction.
-
-Panther City Helpers:
-Repair. Build. Upgrade.
+Fort Worth, send us the space that needs a reset.
 ```
 
 ## First 10 Content Ideas
 
-1. Garage reset before/after: turn one messy corner into labeled storage zones.
-2. Tool wall build: pegboard, hooks, layout decisions, and final walkthrough.
-3. Workbench setup: assemble, level, organize, and show what each zone is for.
-4. LED strip install: clean prep, placement, cable hiding, and final night shot.
-5. Cable management rescue: desk or TV setup before/after with simple clips and ties.
-6. Smart home setup basics: install and test a smart plug, bulb, or camera without overclaiming expertise.
-7. Planter box build: materials, cuts, assembly, sanding, and finished patio placement.
-8. Patio lights install: layout, safe mounting points, extension/power planning, final reveal.
-9. Small fix diagnosis: show the process of figuring out a loose handle, wobbly furniture, stuck drawer, or simple device issue.
-10. "Should we take this job?" series: explain why a project is a fit, needs more info, or should go to a licensed professional.
+1. Garage cleanout before/after with piles sorted into keep, donate, trash, and organize.
+2. House number painting refresh from faded curb numbers to clean high-contrast numbers.
+3. Interior wall refresh: prep, patch, tape, paint, and final reveal.
+4. Deep clean detail shots: baseboards, corners, door frames, and high-touch areas.
+5. Garage organization wall: bins, labels, tool zones, and final walkthrough.
+6. "What we quote first" video explaining photos, scope, timing, and materials.
+7. Home refresh checklist for a room that feels neglected.
+8. Small paint touch-up process with prep and clean edges.
+9. One-day garage reset timelapse.
+10. Before/after carousel showing one clear transformation with simple captions.
 
 ## Content Rules
 
-- Show process, not fake perfection.
-- Say "learning" when it is learning.
-- Say "diagnostics" when it is diagnostics, not certified repair.
-- Never claim licensed trade work.
-- Avoid jokes that make the brand feel childish.
-- Make every post answer: what problem did this solve?
+- Show real process and real results.
+- Keep captions short and direct.
+- Do not use fake testimonials.
+- Do not imply licensed trade work.
+- Do not overpromise timelines or prices.
+- Make every post answer: what changed and why does it matter?

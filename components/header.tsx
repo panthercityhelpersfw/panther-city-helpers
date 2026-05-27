@@ -3,10 +3,9 @@ import { BOOKING_FORM_URL } from "@/lib/site";
 
 const navItems = [
   { label: "Services", href: "#services" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Standards", href: "#trust" },
-  { label: "Projects", href: "#good-first-jobs" },
-  { label: "Area", href: "#service-area" },
+  { label: "Transformations", href: "#transformations" },
+  { label: "Process", href: "#how-it-works" },
+  { label: "Contact", href: "#request-help" },
   { label: "FAQ", href: "#faq" },
 ];
 
@@ -17,7 +16,7 @@ export function Header() {
         <span className="brand__mark">PCH</span>
         <span>
           <strong>Panther City Helpers</strong>
-          <small>Fort Worth, TX</small>
+          <small>Painting - Cleaning - Home Refresh</small>
         </span>
       </a>
       <nav className="site-nav" aria-label="Main navigation">
@@ -34,7 +33,7 @@ export function Header() {
         rel="noreferrer"
       >
         <ClipboardList size={17} aria-hidden="true" />
-        Book Help
+        Get a Quote
       </a>
     </header>
   );

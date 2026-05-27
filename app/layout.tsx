@@ -12,31 +12,29 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Panther City Helpers | Repair, Build, Upgrade in Fort Worth",
+    default: "Panther City Helpers | Fort Worth Painting, Cleaning & Home Refresh",
     template: "%s | Panther City Helpers",
   },
   description:
-    "Panther City Helpers helps Fort Worth repair, build, set up, and upgrade everyday home, garage, tech, and outdoor systems.",
+    "Panther City Helpers provides Fort Worth interior painting, deep cleaning, garage cleanouts, garage refreshes, house number painting, and small home refresh jobs.",
   keywords: [
     "Panther City Helpers",
     "Panther City Helpers Fort Worth",
-    "Fort Worth repair help",
-    "Fort Worth build help",
-    "Fort Worth garage storage setup",
-    "Fort Worth shelving installation help",
-    "Fort Worth smart home setup",
-    "Fort Worth furniture assembly",
-    "Fort Worth cable management",
-    "Fort Worth tool wall setup",
-    "Fort Worth small repairs",
-    "Fort Worth home upgrades",
+    "Fort Worth interior painting",
+    "Fort Worth deep cleaning",
+    "Fort Worth garage cleanouts",
+    "Fort Worth garage organization",
+    "Fort Worth house number painting",
+    "Fort Worth home refresh",
+    "Fort Worth painting cleaning",
+    "Fort Worth home services",
   ],
   authors: [{ name: "Panther City Helpers" }],
   creator: "Panther City Helpers",
   openGraph: {
-    title: "Panther City Helpers | Repair, Build, Upgrade",
+    title: "Panther City Helpers | Painting, Cleaning & Home Refresh",
     description:
-      "Fort Worth help for repairs, builds, setups, and everyday upgrades.",
+      "Fort Worth interior painting, deep cleaning, garage cleanouts, house number painting, and home refresh jobs.",
     type: "website",
     locale: "en_US",
     siteName: "Panther City Helpers",
@@ -51,9 +49,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Panther City Helpers | Repair, Build, Upgrade",
+    title: "Panther City Helpers | Painting, Cleaning & Home Refresh",
     description:
-      "Fort Worth help for repairs, builds, setups, and everyday upgrades.",
+      "Fort Worth interior painting, deep cleaning, garage cleanouts, house number painting, and home refresh jobs.",
     images: ["/fort-worth-skyline.jpg"],
   },
   robots: {

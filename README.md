@@ -1,6 +1,6 @@
 # Panther City Helpers
 
-Trust-focused Next.js site for Panther City Helpers, a Fort Worth repair, build, setup, and upgrade brand.
+Production-ready Next.js site for Panther City Helpers, a Fort Worth painting, cleaning, and home refresh service.
 
 ## Tech Stack
 
@@ -33,13 +33,13 @@ There is no lint script currently configured. The production build runs TypeScri
 
 ## Current Contact Form Behavior
 
-The public booking CTA sends project requests to the Fillout request form:
+The public quote CTA sends project requests to the Fillout request form:
 
 ```text
 https://forms.fillout.com/t/oiRvQbsxvmus
 ```
 
-The form is a request, not an instant confirmation. Panther City Helpers reviews scope, safety, tools, and fit before scheduling.
+The form is a request, not an instant confirmation. Panther City Helpers reviews the scope, timing, materials, and fit before scheduling.
 
 The email address is used throughout the site:
 
@@ -72,7 +72,7 @@ Update these values there:
 - `PHONE_PLACEHOLDER`
 - social links and handles
 
-Future backend connection options if Jotform is replaced later:
+Future backend connection options if Fillout is replaced later:
 
 - Formspree endpoint
 - Resend email API through a Vercel Server Action or API route
@@ -85,18 +85,18 @@ Future backend connection options if Jotform is replaced later:
 Current positioning:
 
 ```text
-Repair • Build • Upgrade
+Painting - Cleaning - Home Refresh
 ```
 
-Panther City Helpers should be framed as practical Fort Worth help for repairs, builds, setups, diagnostics, garage systems, workshop upgrades, tech utility setup, and useful small projects. Do not frame the brand as cleaners, maid service, lawn care only, basic chores, or random teen labor.
+Panther City Helpers should feel like a bold, trustworthy Fort Worth home services brand focused on visible before-and-after improvement. Keep the copy direct and local. Emphasize interior painting, deep cleaning, garage cleanouts, garage organization, house number painting, and small home refresh jobs.
 
-Social bios, a pinned evolution post, and content ideas live in:
+Do not add fake reviews, fake certifications, or claims that the business does "everything."
+
+Social bios and content direction live in:
 
 ```text
 docs/social-repositioning.md
 ```
-
-Add any required keys in Vercel Project Settings under Environment Variables.
 
 ## Environment Variables
 
@@ -152,6 +152,7 @@ Vercel hosts the built Next.js site on its managed platform. Once deployed, the 
 
 - Confirm final domain and set `NEXT_PUBLIC_SITE_URL`.
 - Confirm the Facebook page URL once the exact public page link is available.
-- Test the mailto form on a phone and desktop email client.
-- Add a real backend later if Panther City Helpers wants stored submissions or automatic email delivery.
-- Keep parent/guardian approval language visible on the site.
+- Test the Fillout quote form from mobile and desktop.
+- Test the email link on mobile and desktop email clients.
+- Replace the phone placeholder after claiming the business number.
+- Add real project photos when available.

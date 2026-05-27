@@ -1,3 +1,6 @@
+"use client";
+
+import { FormEvent, useState } from "react";
 import {
   CalendarCheck,
   Camera,
@@ -13,6 +16,15 @@ import {
   PHONE_PLACEHOLDER,
   SOCIALS,
 } from "@/lib/site";
+
+const serviceOptions = [
+  "Interior Painting",
+  "Deep Cleaning",
+  "Garage Cleanout",
+  "Garage Organization",
+  "House Number Painting",
+  "General Home Refresh",
+];
 
 const contactRows = [
   {
@@ -47,34 +59,54 @@ const contactRows = [
 ];
 
 export function ContactForm() {
+  const [selectedService, setSelectedService] = useState("");
+
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    window.open(BOOKING_FORM_URL, "_blank", "noopener,noreferrer");
+  }
+
   return (
-    <div className="request-form contact-panel">
+    <form className="quote-form contact-panel" onSubmit={handleSubmit}>
       <div className="form-heading">
-        <h3>Request a project</h3>
+        <h3>Get a free quote</h3>
         <p>
-          The Fillout form sends a project request, not an instant confirmation.
-          We review scope, safety, tools, and whether the job fits our current
-          skill level.
+          Pick the service that fits best. The full quote request opens in
+          Fillout so you can send photos and details.
         </p>
       </div>
 
-      <a
-        className="button button--primary form-button"
-        href={BOOKING_FORM_URL}
-        target="_blank"
-        rel="noreferrer"
-      >
-        Open the project request form
-        <CalendarCheck size={18} aria-hidden="true" />
-      </a>
+      <label>
+        Service needed
+        <select
+          value={selectedService}
+          onChange={(event) => setSelectedService(event.target.value)}
+          required
+        >
+          <option value="" disabled>
+            Select a service
+          </option>
+          {serviceOptions.map((option) => (
+            <option value={option} key={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </label>
 
-      <div className="form-summary">
+      <div className={selectedService ? "form-summary" : "form-summary empty-state"}>
         <ShieldCheck size={19} aria-hidden="true" />
         <p>
-          We handle practical setup, repair, build, and upgrade work. We do not
-          accept unsafe, fake, licensed-trade, or adult-only job requests.
+          {selectedService
+            ? `${selectedService} selected. Continue to the quote form to add photos, timing, and project details.`
+            : "Choose a service to start. We review every quote request before confirming work."}
         </p>
       </div>
+
+      <button className="button button--primary form-button" type="submit">
+        Continue to Quote Form
+        <CalendarCheck size={18} aria-hidden="true" />
+      </button>
 
       <div className="contact-list" aria-label="Contact and social links">
         {contactRows.map((row) => (
@@ -99,9 +131,9 @@ export function ContactForm() {
       </div>
 
       <p className="form-note">
-        Privacy note: do not include sensitive medical, financial, or emergency
-        information in the booking request.
+        The quote form is a request, not an instant confirmation. No fake
+        discounts, no surprise claims.
       </p>
-    </div>
+    </form>
   );
 }

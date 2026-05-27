@@ -1,4 +1,11 @@
-import { CalendarCheck, Camera, Mail, MapPin, MessageCircle, Music2 } from "lucide-react";
+import {
+  CalendarCheck,
+  Camera,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Music2,
+} from "lucide-react";
 import { BOOKING_FORM_URL, CONTACT_EMAIL, SOCIALS } from "@/lib/site";
 
 const socials = [
@@ -30,12 +37,12 @@ export function Footer() {
           <span className="brand__mark">PCH</span>
           <span>
             <strong>Panther City Helpers</strong>
-            <small>Repair • Build • Upgrade</small>
+            <small>Painting - Cleaning - Home Refresh</small>
           </span>
         </a>
         <p>
-          Fort Worth help for repairs, builds, setups, garage systems, tech
-          utility projects, and everyday upgrades.
+          Fort Worth interior painting, deep cleaning, garage cleanouts, house
+          number painting, and small home refresh jobs.
         </p>
       </div>
       <div className="footer-contact">
@@ -45,7 +52,7 @@ export function Footer() {
         </a>
         <a href={BOOKING_FORM_URL} target="_blank" rel="noreferrer">
           <CalendarCheck size={18} aria-hidden="true" />
-          Booking request form
+          Free quote form
         </a>
         <span className="footer-location">
           <MapPin size={18} aria-hidden="true" />

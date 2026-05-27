@@ -1,19 +1,18 @@
 import {
   BadgeCheck,
-  Boxes,
   CalendarCheck,
-  Cable,
   CheckCircle2,
   ClipboardCheck,
-  Hammer,
+  Hash,
   Home,
-  Lightbulb,
   Mail,
   MapPin,
-  MonitorCog,
+  PaintRoller,
   ShieldCheck,
   Sparkles,
-  Wrench,
+  SprayCan,
+  Trash2,
+  Warehouse,
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
@@ -23,156 +22,112 @@ import { BOOKING_FORM_URL, CONTACT_EMAIL } from "@/lib/site";
 
 const services = [
   {
-    icon: Boxes,
-    title: "Garage systems",
-    meta: "Storage that works",
+    icon: PaintRoller,
+    title: "Interior Painting",
     description:
-      "Shelving, storage zones, tool walls, workbench setup, and garage resets that make everyday gear easier to use.",
+      "Walls, bedrooms, trim, touch-ups, and clean refreshes that make a room feel finished again.",
   },
   {
-    icon: Wrench,
-    title: "Small repairs",
-    meta: "Fix the nagging stuff",
+    icon: SprayCan,
+    title: "Deep Cleaning",
     description:
-      "Simple fixes, adjustments, tightening, diagnostics, and repair research for non-licensed household issues.",
+      "Focused cleaning for move-outs, resets, garages, kitchens, and spaces that need real attention.",
   },
   {
-    icon: MonitorCog,
-    title: "Tech and smart setup",
-    meta: "Devices, cables, rooms",
+    icon: Trash2,
+    title: "Garage Cleanouts",
     description:
-      "Smart home setup, device basics, cable management, LED strips, desk layouts, and tidier room utility systems.",
+      "From cluttered to usable. Sorting, hauling prep, sweeping, and clearing space without the drama.",
   },
   {
-    icon: Hammer,
-    title: "Assembly and builds",
-    meta: "Useful things finished",
+    icon: Hash,
+    title: "House Number Painting",
     description:
-      "Furniture, desks, workbenches, planter boxes, patio lights, outdoor utility builds, and small fix/build projects.",
+      "Crisp curb numbers that make the front of a home look sharper and easier to find.",
   },
   {
-    icon: Lightbulb,
-    title: "Upgrade projects",
-    meta: "Improve the system",
+    icon: Home,
+    title: "Home Refresh",
     description:
-      "Practical upgrades for garages, rooms, patios, workshops, and home systems people keep meaning to finish.",
+      "Small fixes, touch-ups, organization, and detail work that helps a home feel cared for.",
   },
 ];
 
 const steps = [
-  "Send the project request with photos, measurements, the goal, and what already exists.",
-  "We review scope, tools, safety, and whether the job fits our current repair/build skill level.",
-  "If it fits, we confirm the plan, show up prepared, and work through the setup, build, or upgrade.",
+  "Send the quote request with the service, photos, timing, and the address area.",
+  "We review the scope and follow up with questions or an honest starting estimate.",
+  "Once confirmed, we show up ready, protect the space, do the work, and leave it better.",
 ];
 
 const trustPoints = [
   {
-    icon: ShieldCheck,
-    title: "Scope before scheduling",
+    icon: MapPin,
+    title: "Local Fort Worth",
     description:
-      "Every request is reviewed before scheduling so the project is clear, realistic, and safe.",
+      "Built for Fort Worth homeowners who want direct, practical help without a complicated process.",
   },
   {
-    icon: ClipboardCheck,
-    title: "Honest skill level",
+    icon: ShieldCheck,
+    title: "Reliable communication",
     description:
-      "We do not claim to be certified electricians, plumbers, appliance technicians, or licensed trades.",
+      "Quote requests are reviewed before scheduling so expectations, timing, and scope are clear.",
   },
   {
     icon: BadgeCheck,
-    title: "Practical problem solvers",
+    title: "Quality work",
     description:
-      "The focus is hands-on setup, diagnostics, small repairs, useful builds, and project follow-through.",
+      "We focus on clean lines, reset spaces, honest pricing, and before/after results people can see.",
+  },
+];
+
+const transformations = [
+  {
+    title: "Interior Painting",
+    before: "scuffed wall",
+    after: "clean finish",
   },
   {
-    icon: Wrench,
-    title: "Learning in public",
-    description:
-      "Some content may show appliance or tech diagnostics as learning content, not certified repair service.",
+    title: "Garage Refresh",
+    before: "cluttered bay",
+    after: "usable zones",
   },
-];
-
-const goodFirstJobs = [
-  "Build a garage shelf layout and label storage zones.",
-  "Set up a tool wall, pegboard, or workbench area.",
-  "Assemble a desk, furniture piece, workbench, or utility cart.",
-  "Clean up LED strips, chargers, extension cords, and cable runs.",
-  "Install patio lights, planter boxes, hooks, bins, or simple outdoor utility pieces.",
-  "Troubleshoot a basic appliance, device, or setup issue as diagnostics and learning content.",
-];
-
-const unavailableJobs = [
-  "Electrical, plumbing, HVAC, gas, structural, roofing, or other licensed-trade work.",
-  "Major appliance repair claims, warranty work, or anything presented as certified technician service.",
-  "Dangerous jobs involving roofs, tall ladders, hazardous chemicals, heavy lifts, or unsafe tools.",
-  "Emergency repairs, adult-only responsibility, or projects where the safe answer is to call a pro.",
+  {
+    title: "House Numbers",
+    before: "faded curb",
+    after: "sharp numbers",
+  },
 ];
 
 const serviceAreas = [
-  "Fort Worth neighborhoods",
+  "Fort Worth",
   "TCU area",
   "Westcliff",
   "Arlington Heights",
   "Ridglea",
-  "Rivercrest",
   "Cultural District",
   "Nearby areas by request",
 ];
 
-const quickProof = [
-  "Repair • Build • Upgrade",
-  "Scope reviewed before scheduling",
-  "Licensed-trade work declined",
-];
-
-const requestChecklist = [
-  {
-    title: "Photos of the current setup",
-    description:
-      "Show the garage, room, device, wall, patio, storage area, or system you want improved.",
-  },
-  {
-    title: "The outcome you want",
-    description:
-      "Tell us whether you want it repaired, built, installed, organized, diagnosed, or upgraded.",
-  },
-  {
-    title: "Parts, tools, and measurements",
-    description:
-      "Include what you already bought, what tools are available, measurements, and any product links.",
-  },
-  {
-    title: "Safety and limits",
-    description:
-      "Mention anything electrical, plumbing, heavy, high, sharp, or risky so we can decline or redirect if needed.",
-  },
-];
-
 const faqs = [
   {
-    question: "How do I request help?",
+    question: "Is the quote form an instant booking?",
     answer:
-      "Use the project request form or email panthercityhelpersfw@gmail.com with photos, the goal, measurements, timing, and any safety notes.",
+      "No. It sends a quote request. Panther City Helpers reviews the scope, timing, photos, and details before confirming a job.",
   },
   {
-    question: "Are prices listed?",
+    question: "What should I include in the request?",
     answer:
-      "Not yet. Project scope, tools, parts, distance, and time can vary. Panther City Helpers can provide a clear starting estimate before anything is scheduled.",
+      "Include the service you need, photos if possible, your area of Fort Worth, timing, and any details that affect the scope.",
   },
   {
-    question: "What kinds of jobs are a good fit?",
+    question: "Do you do huge remodels or licensed trade work?",
     answer:
-      "Good fits include garage systems, shelving, tool walls, workbench setup, furniture assembly, cable management, smart home setup, LED installs, planter boxes, patio lights, and small fix/build projects.",
+      "No. The focus is painting, cleaning, garage refreshes, house numbers, and small home refresh jobs. We do not claim licensed trade work.",
   },
   {
-    question: "Do you serve all of Fort Worth?",
+    question: "Do you use fake reviews or stock transformations?",
     answer:
-      "The service focuses on Fort Worth first. Nearby areas can be considered based on project scope, timing, transportation, and availability.",
-  },
-  {
-    question: "Do you handle licensed trade work?",
-    answer:
-      "No. We do not present ourselves as certified electricians, plumbers, HVAC techs, appliance technicians, or licensed contractors. If a project needs a pro, we will say so.",
+      "No. The transformation blocks are design placeholders until real before/after photos are ready.",
   },
 ];
 
@@ -181,7 +136,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Panther City Helpers",
   description:
-    "Fort Worth repair, build, setup, and upgrade help for garages, rooms, tech, outdoor spaces, and everyday home systems.",
+    "Fort Worth painting, cleaning, garage cleanout, house number painting, and home refresh service.",
   email: CONTACT_EMAIL,
   areaServed: {
     "@type": "City",
@@ -202,12 +157,11 @@ export default function HomePage() {
       <main>
         <section className="hero" id="home">
           <div className="hero__content">
-            <p className="eyebrow">Repair • Build • Upgrade</p>
-            <h1>Fort Worth help for useful projects that need finishing.</h1>
+            <p className="eyebrow">Fort Worth's go-to for</p>
+            <h1>Fort Worth's Go-To For Painting, Cleaning & Home Refresh.</h1>
             <p className="hero__lede">
-              Panther City Helpers helps people fix, build, set up, and improve
-              everyday systems around homes, garages, rooms, tech, workshops,
-              and outdoor spaces.
+              Interior painting, deep cleaning, garage refreshes, house number
+              painting, and more.
             </p>
             <div className="hero__actions" aria-label="Primary actions">
               <a
@@ -216,76 +170,99 @@ export default function HomePage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Request a Project
+                Get a Free Quote
                 <CalendarCheck size={18} aria-hidden="true" />
               </a>
-              <a
-                className="button button--secondary"
-                href={`mailto:${CONTACT_EMAIL}`}
-              >
-                Email Us
-                <Mail size={18} aria-hidden="true" />
+              <a className="button button--secondary" href="#services">
+                View Services
+                <ClipboardCheck size={18} aria-hidden="true" />
               </a>
             </div>
-            <div className="hero__notice" role="note">
-              <ShieldCheck size={19} aria-hidden="true" />
+            <div className="trust-badges" aria-label="Trust badges">
               <span>
-                We help with practical projects, not licensed trade work. Every
-                request is reviewed for scope, safety, and fit before scheduling.
+                <MapPin size={17} aria-hidden="true" />
+                Local Fort Worth
+              </span>
+              <span>
+                <ShieldCheck size={17} aria-hidden="true" />
+                Reliable
+              </span>
+              <span>
+                <BadgeCheck size={17} aria-hidden="true" />
+                Quality Work
               </span>
             </div>
-            <dl className="hero__stats" aria-label="Service highlights">
-              <div>
-                <dt>5</dt>
-                <dd>project lanes</dd>
-              </div>
-              <div>
-                <dt>FW</dt>
-                <dd>local focus</dd>
-              </div>
-              <div>
-                <dt>Scope</dt>
-                <dd>review first</dd>
-              </div>
-            </dl>
           </div>
-          <div className="hero__media">
-            <img
-              src="/fort-worth-skyline.jpg"
-              alt="Fort Worth skyline at sunset"
-            />
-            <div className="hero__mediaPanel" aria-label="Available help">
-              <CheckCircle2 size={22} aria-hidden="true" />
-              <div>
-                <strong>Built for practical project follow-through</strong>
-                <span>Setups, repairs, builds, diagnostics, and upgrades.</span>
+          <div className="hero__identity" aria-label="Panther City Helpers visual identity">
+            <div className="mascot-card">
+              <div className="mascot-card__burst" />
+              <div className="mascot-card__portrait">
+                <span>PCH</span>
               </div>
+              <div className="mascot-card__stamp">
+                <strong>PCH</strong>
+                <span>FW</span>
+              </div>
+              <p>Painting - Cleaning - Home Refresh</p>
             </div>
           </div>
         </section>
 
-        <section className="proof-strip" aria-label="Booking safeguards">
-          {quickProof.map((item) => (
-            <div key={item}>
-              <CheckCircle2 size={18} aria-hidden="true" />
-              <span>{item}</span>
-            </div>
-          ))}
+        <section className="proof-strip" aria-label="Service promise">
+          <div>
+            <CheckCircle2 size={18} aria-hidden="true" />
+            <span>Quality work</span>
+          </div>
+          <div>
+            <CheckCircle2 size={18} aria-hidden="true" />
+            <span>Honest prices</span>
+          </div>
+          <div>
+            <CheckCircle2 size={18} aria-hidden="true" />
+            <span>Before/after results</span>
+          </div>
         </section>
 
-        <section className="section section--cream" id="services">
+        <section className="section section--light" id="services">
           <SectionHeader
-            eyebrow="Services"
-            title="Repair, build, setup, and upgrade work"
-            description="The first impression should be simple: useful projects, practical systems, honest scope, and no fake trade claims."
+            eyebrow="Our services"
+            title="Clean, practical work that changes how a space feels"
+            description="No overpromising. No fake certifications. Just focused painting, cleaning, garage refreshes, and small home upgrades."
           />
           <div className="service-grid">
             {services.map((service) => (
               <article className="service-card" key={service.title}>
-                <service.icon size={26} aria-hidden="true" />
-                <span className="service-card__meta">{service.meta}</span>
+                <div className="service-card__icon">
+                  <service.icon size={27} aria-hidden="true" />
+                </div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section section--dark" id="transformations">
+          <SectionHeader
+            eyebrow="Before / After"
+            title="Transformations That Speak"
+            description="Real project photos can drop into these slots later. For now, the layout is ready for clean before/after proof."
+            inverted
+          />
+          <div className="transformation-grid">
+            {transformations.map((item) => (
+              <article className="transformation-card" key={item.title}>
+                <div className="comparison">
+                  <div className="comparison__side comparison__side--before">
+                    <span>Before</span>
+                    <strong>{item.before}</strong>
+                  </div>
+                  <div className="comparison__side comparison__side--after">
+                    <span>After</span>
+                    <strong>{item.after}</strong>
+                  </div>
+                </div>
+                <h3>{item.title}</h3>
               </article>
             ))}
           </div>
@@ -294,9 +271,9 @@ export default function HomePage() {
         <section className="section" id="how-it-works">
           <div className="split">
             <SectionHeader
-              eyebrow="How it works"
-              title="A better way to finish stuck projects"
-              description="The request form collects photos, measurements, parts, goals, and safety notes so we can decide whether the project is a fit."
+              eyebrow="Process"
+              title="Quotes stay simple"
+              description="Send the request, include photos if you have them, and we will confirm the scope before anything is scheduled."
             />
             <div className="step-list">
               {steps.map((step, index) => (
@@ -309,118 +286,70 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section section--navy" id="trust">
-          <div className="section__inner">
-            <SectionHeader
-              eyebrow="Trust"
-              title="Useful help, honest boundaries"
-              description="Panther City Helpers is evolving into a practical repair, build, setup, and upgrade brand. We stay clear about what we can and cannot do."
-              inverted
-            />
-            <div className="trust-grid">
-              {trustPoints.map((point) => (
-                <article className="trust-card" key={point.title}>
-                  <point.icon size={26} aria-hidden="true" />
-                  <h3>{point.title}</h3>
-                  <p>{point.description}</p>
-                </article>
-              ))}
-            </div>
+        <section className="section section--light" id="trust">
+          <SectionHeader
+            eyebrow="Why homeowners trust it"
+            title="Local, direct, and focused on the finish"
+            description="The goal is simple: make the space look better, feel better, and stay that way."
+          />
+          <div className="trust-grid">
+            {trustPoints.map((point) => (
+              <article className="trust-card" key={point.title}>
+                <point.icon size={26} aria-hidden="true" />
+                <h3>{point.title}</h3>
+                <p>{point.description}</p>
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="section section--cream" id="good-first-jobs">
-          <div className="jobs-layout">
-            <SectionHeader
-              eyebrow="Good first jobs"
-              title="Good project lanes to start with"
-              description="The best requests have a visible problem, a practical goal, and a clear finish line. These are the kinds of jobs that fit the new direction."
-            />
-            <div className="jobs-grid">
-              {goodFirstJobs.map((job) => (
-                <div className="job-item" key={job}>
-                  <CheckCircle2 size={19} aria-hidden="true" />
-                  <span>{job}</span>
-                </div>
-              ))}
-            </div>
+        <section className="quote-band">
+          <div>
+            <p className="eyebrow">Ready to refresh your space?</p>
+            <h2>Get a clear quote before the work starts.</h2>
           </div>
+          <a
+            className="button button--primary"
+            href={BOOKING_FORM_URL}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Get a Free Quote
+            <CalendarCheck size={18} aria-hidden="true" />
+          </a>
         </section>
 
-        <section className="section checklist-section" id="request-checklist">
-          <div className="checklist-layout">
+        <section className="section request-section" id="request-help">
+          <div className="request-layout">
             <div>
-              <p className="eyebrow">Before you book</p>
-              <h2>Send the details that make a project possible.</h2>
+              <p className="eyebrow">Contact</p>
+              <h2>Tell us what needs refreshing.</h2>
               <p>
-                A clear request helps us see the system, understand the goal,
-                and decide whether the project is safe and realistic. Photos are
-                especially useful.
+                Choose a service, describe the space, and send photos through
+                the quote form if you have them. We will follow up with a clear
+                next step.
               </p>
-              <a
-                className="button button--primary checklist-button"
-                href={BOOKING_FORM_URL}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Start the request
-                <CalendarCheck size={18} aria-hidden="true" />
-              </a>
-            </div>
-            <div className="checklist-grid">
-              {requestChecklist.map((item) => (
-                <article className="checklist-card" key={item.title}>
-                  <CheckCircle2 size={20} aria-hidden="true" />
-                  <div>
-                    <h3>{item.title}</h3>
-                    <p>{item.description}</p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="section boundary-section" id="not-available">
-          <div className="boundary-layout">
-            <div>
-              <p className="eyebrow">Not available for</p>
-              <h2>Some work belongs with adults or professionals.</h2>
-              <p>
-                Panther City Helpers is for practical setup, repair, build, and
-                upgrade projects. If a request needs a licensed professional, is
-                unsafe, or is outside our current skill level, we will pass on
-                it or recommend calling a pro.
-              </p>
-            </div>
-            <div className="unavailable-list">
-              {unavailableJobs.map((job) => (
-                <div className="unavailable-item" key={job}>
-                  <span aria-hidden="true">Not a fit</span>
-                  <p>{job}</p>
+              <div className="contact-card">
+                <Sparkles size={22} aria-hidden="true" />
+                <div>
+                  <strong>Prefer email?</strong>
+                  <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
                 </div>
-              ))}
+              </div>
             </div>
+            <ContactForm />
           </div>
         </section>
 
-        <section className="section section--cream" id="service-area">
+        <section className="section section--light" id="service-area">
           <div className="area-layout">
             <div>
               <p className="eyebrow">Service area</p>
-              <h2>Local to Fort Worth, TX</h2>
+              <h2>Serving Fort Worth, TX</h2>
               <p>
-                Panther City Helpers focuses on Fort Worth projects that can be
-                coordinated clearly and safely. Nearby areas can be considered
-                when the scope and timing make sense.
+                Panther City Helpers is built for Fort Worth homeowners who want
+                practical improvements without a drawn-out process.
               </p>
-              <div className="area-note">
-                <MapPin size={22} aria-hidden="true" />
-                <span>
-                  Include your neighborhood or nearest major intersection in the
-                  request form so we can check whether the project is realistic.
-                </span>
-              </div>
             </div>
             <div className="area-list" aria-label="Example service areas">
               {serviceAreas.map((area) => (
@@ -430,36 +359,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section request-section" id="request-help">
-          <div className="request-layout">
-            <div>
-              <p className="eyebrow">Request help</p>
-              <h2>Send the project through the booking form.</h2>
-              <p>
-                Share the problem, the goal, photos, parts, measurements, and
-                timing. We will review fit, safety, and availability before
-                anything is scheduled. The booking form is a request, not an
-                instant confirmation.
-              </p>
-              <div className="contact-card">
-                <Sparkles size={22} aria-hidden="true" />
-                <div>
-                  <strong>Prefer email?</strong>
-                  <a href={`mailto:${CONTACT_EMAIL}`}>
-                    {CONTACT_EMAIL}
-                  </a>
-                </div>
-              </div>
-            </div>
-            <ContactForm />
-          </div>
-        </section>
-
-        <section className="section section--cream" id="faq">
+        <section className="section section--dark" id="faq">
           <SectionHeader
             eyebrow="FAQ"
             title="Good questions before you book"
-            description="A few practical answers for families checking whether Panther City Helpers is the right fit."
+            description="A few practical answers before you request a quote."
+            inverted
           />
           <div className="faq-list">
             {faqs.map((faq) => (
@@ -478,7 +383,7 @@ export default function HomePage() {
         target="_blank"
         rel="noreferrer"
       >
-        Book Help
+        Get Quote
         <CalendarCheck size={18} aria-hidden="true" />
       </a>
       <script
