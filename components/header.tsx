@@ -1,10 +1,10 @@
-import { ClipboardList } from "lucide-react";
-import { BOOKING_FORM_URL } from "@/lib/site";
+import { CalendarCheck } from "lucide-react";
+import { BUSINESS_NAME } from "@/lib/site";
 
 const navItems = [
   { label: "Services", href: "#services" },
-  { label: "Transformations", href: "#transformations" },
-  { label: "Process", href: "#how-it-works" },
+  { label: "Gallery", href: "#transformations" },
+  { label: "About", href: "#about" },
   { label: "Contact", href: "#request-help" },
   { label: "FAQ", href: "#faq" },
 ];
@@ -12,11 +12,13 @@ const navItems = [
 export function Header() {
   return (
     <header className="site-header">
-      <a className="brand" href="#home" aria-label="Panther City Helpers home">
-        <span className="brand__mark">PCH</span>
+      <a className="brand" href="#home" aria-label={`${BUSINESS_NAME} home`}>
+        <span className="brand__mark" aria-hidden="true">
+          PC
+        </span>
         <span>
-          <strong>Panther City Helpers</strong>
-          <small>Painting - Cleaning - Home Refresh</small>
+          <strong>{BUSINESS_NAME}</strong>
+          <small>Cleaner. Sharper. Better.</small>
         </span>
       </a>
       <nav className="site-nav" aria-label="Main navigation">
@@ -26,14 +28,9 @@ export function Header() {
           </a>
         ))}
       </nav>
-      <a
-        className="header-contact"
-        href={BOOKING_FORM_URL}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <ClipboardList size={17} aria-hidden="true" />
-        Get a Quote
+      <a className="header-contact" href="#request-help">
+        <CalendarCheck size={17} aria-hidden="true" />
+        Book Now
       </a>
     </header>
   );

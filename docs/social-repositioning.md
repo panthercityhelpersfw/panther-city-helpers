@@ -1,55 +1,46 @@
-# Panther City Helpers Social Direction
-
-Business name stays: Panther City Helpers.
+# Panther City Detailing Social Direction
 
 Core identity:
 
 ```text
-Painting - Cleaning - Home Refresh
+Cleaner. Sharper. Better.
 ```
 
 Positioning:
 
 ```text
-Fort Worth help for interior painting, deep cleaning, garage cleanouts, house number painting, and small home refresh jobs.
+Fort Worth mobile detailing, pressure washing, exterior cleaning, and before/after transformations.
 ```
 
-Keep the brand bold, direct, local, and homeowner-friendly. Do not add fake reviews, fake certifications, or claims that the business does every kind of home repair.
+Keep the brand premium, clean, direct, and mobile-first. Do not add fake reviews, fake certifications, or fake transformation photos.
 
 ## Bio Options
 
 ### Instagram
 
 ```text
-Panther City Helpers
-Painting - Cleaning - Home Refresh
+Panther City Detailing
+Mobile detailing - Pressure washing - Exterior cleaning
 Fort Worth, TX
-Quality work. Honest pricing.
-Free quotes below.
-```
-
-Shorter version:
-
-```text
-Painting - Cleaning - Home Refresh
-Fort Worth home refresh jobs, garage cleanouts, house numbers, and more.
-Free quotes below.
+Cleaner. Sharper. Better.
+Book below.
 ```
 
 ### TikTok
 
 ```text
-Painting - Cleaning - Home Refresh
-Fort Worth, TX
-Before/after home projects, garage resets, deep cleans, and house number painting.
+Cleaner. Sharper. Better.
+Mobile detailing + pressure washing in Fort Worth, TX.
+Before/after transformations.
 ```
 
 ### Facebook
 
 ```text
-Panther City Helpers provides Fort Worth home refresh services including interior painting, deep cleaning, garage cleanouts, garage organization, house number painting, and small refresh jobs.
+Panther City Detailing provides mobile detailing, pressure washing, exterior cleaning, and vehicle refresh services around Fort Worth, TX.
 
-Quality work. Honest pricing. Local service.
+Cleaner. Sharper. Better.
+Book on our website.
 ```
 
 ## Pinned Brand Post
@@ -57,60 +48,37 @@ Quality work. Honest pricing. Local service.
 Caption:
 
 ```text
-Panther City Helpers is focused on home refresh work around Fort Worth.
+Panther City Detailing is built around one thing:
 
-Painting - Cleaning - Home Refresh
+Cleaner. Sharper. Better.
 
-We are taking on practical projects that make a space look better, feel cleaner, and work better:
-- interior painting
-- deep cleaning
-- garage cleanouts
-- garage refresh and organization
-- house number painting
-- small home refresh jobs
+We are focused on mobile detailing, pressure washing, exterior cleaning, and visible before/after transformations around Fort Worth.
 
-We are not here to claim we do everything.
-We are here to do clear, useful jobs with quality work and honest pricing.
+No fake reviews.
+No fake before/afters.
+No overcomplicated booking process.
 
-Send a quote request when your space needs a reset.
-```
-
-Short video script:
-
-```text
-Panther City Helpers is moving in a sharper direction:
-
-Painting.
-Cleaning.
-Home Refresh.
-
-Interior painting.
-Deep cleaning.
-Garage cleanouts.
-House number painting.
-Small projects that make a real before-and-after difference.
-
-Fort Worth, send us the space that needs a reset.
+Send a request on the website and we will follow up before confirming the job.
 ```
 
 ## First 10 Content Ideas
 
-1. Garage cleanout before/after with piles sorted into keep, donate, trash, and organize.
-2. House number painting refresh from faded curb numbers to clean high-contrast numbers.
-3. Interior wall refresh: prep, patch, tape, paint, and final reveal.
-4. Deep clean detail shots: baseboards, corners, door frames, and high-touch areas.
-5. Garage organization wall: bins, labels, tool zones, and final walkthrough.
-6. "What we quote first" video explaining photos, scope, timing, and materials.
-7. Home refresh checklist for a room that feels neglected.
-8. Small paint touch-up process with prep and clean edges.
-9. One-day garage reset timelapse.
-10. Before/after carousel showing one clear transformation with simple captions.
+1. Wheel and tire cleaning before/after.
+2. Dirty cupholder detail close-up.
+3. Floor mat reset from dusty to sharp.
+4. Driveway pressure washing pass reveal.
+5. Exterior wash foam shot and final walkaround.
+6. Interior panel wipe-down detail.
+7. Trash-bin or patio surface pressure wash.
+8. "What to include in your booking request" short video.
+9. Maintenance wash routine for a weekly driver.
+10. Real customer project carousel once photos are approved.
 
 ## Content Rules
 
-- Show real process and real results.
-- Keep captions short and direct.
-- Do not use fake testimonials.
+- Use real jobs and real photos.
+- Keep captions short.
+- Show the before and after clearly.
 - Do not imply licensed trade work.
-- Do not overpromise timelines or prices.
-- Make every post answer: what changed and why does it matter?
+- Do not overpromise timelines or pricing.
+- Make every post answer: what got cleaner, sharper, or better?

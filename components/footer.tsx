@@ -1,12 +1,10 @@
+import { Camera, Mail, MapPin, MessageCircle, Music2, Phone } from "lucide-react";
 import {
-  CalendarCheck,
-  Camera,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Music2,
-} from "lucide-react";
-import { BOOKING_FORM_URL, CONTACT_EMAIL, SOCIALS } from "@/lib/site";
+  BUSINESS_NAME,
+  CONTACT_EMAIL,
+  PHONE_PLACEHOLDER,
+  SOCIALS,
+} from "@/lib/site";
 
 const socials = [
   {
@@ -34,15 +32,17 @@ export function Footer() {
     <footer className="site-footer">
       <div>
         <a className="brand brand--footer" href="#home">
-          <span className="brand__mark">PCH</span>
+          <span className="brand__mark" aria-hidden="true">
+            PC
+          </span>
           <span>
-            <strong>Panther City Helpers</strong>
-            <small>Painting - Cleaning - Home Refresh</small>
+            <strong>{BUSINESS_NAME}</strong>
+            <small>Mobile detailing - pressure washing - exterior cleaning</small>
           </span>
         </a>
         <p>
-          Fort Worth interior painting, deep cleaning, garage cleanouts, house
-          number painting, and small home refresh jobs.
+          Fort Worth mobile detailing and exterior cleaning built around clean
+          work, honest communication, and visible before/after results.
         </p>
       </div>
       <div className="footer-contact">
@@ -50,14 +50,15 @@ export function Footer() {
           <Mail size={18} aria-hidden="true" />
           {CONTACT_EMAIL}
         </a>
-        <a href={BOOKING_FORM_URL} target="_blank" rel="noreferrer">
-          <CalendarCheck size={18} aria-hidden="true" />
-          Free quote form
-        </a>
+        <span>
+          <Phone size={18} aria-hidden="true" />
+          {PHONE_PLACEHOLDER}
+        </span>
         <span className="footer-location">
           <MapPin size={18} aria-hidden="true" />
           Fort Worth, TX
         </span>
+        <a href="#request-help">Book on this site</a>
         <div className="footer-handles" aria-label="Social handles">
           {socials.map((social) => (
             <a

@@ -1,12 +1,13 @@
-# Panther City Helpers
+# Panther City Detailing
 
-Production-ready Next.js site for Panther City Helpers, a Fort Worth painting, cleaning, and home refresh service.
+Production-ready Next.js site for Panther City Detailing, a Fort Worth mobile detailing, pressure washing, and exterior cleaning service.
 
 ## Tech Stack
 
 - Next.js App Router
 - React
 - TypeScript
+- Resend for booking request email
 - Global CSS in `app/globals.css`
 - Vercel-ready with the default Next.js framework preset
 
@@ -31,33 +32,31 @@ npm run build
 
 There is no lint script currently configured. The production build runs TypeScript and Next.js build checks.
 
-## Current Contact Form Behavior
+## On-Site Booking System
 
-The public quote CTA sends project requests to the Fillout request form:
+The booking form is now built into the site. It submits to:
 
 ```text
-https://forms.fillout.com/t/oiRvQbsxvmus
+app/api/bookings/route.ts
 ```
 
-The form is a request, not an instant confirmation. Panther City Helpers reviews the scope, timing, materials, and fit before scheduling.
-
-The email address is used throughout the site:
+The API route sends an email through Resend to:
 
 ```text
 panthercityhelpersfw@gmail.com
 ```
 
-The temporary phone placeholder is:
+Required environment variables:
 
 ```text
-Business phone coming soon
+RESEND_API_KEY=
+BOOKING_TO_EMAIL=panthercityhelpersfw@gmail.com
+RESEND_FROM_EMAIL=Panther City Bookings <onboarding@resend.dev>
 ```
 
-TODO: Replace phone placeholder after claiming a free Google Voice number.
+Use `onboarding@resend.dev` while testing. For launch, verify a sending domain in Resend and replace `RESEND_FROM_EMAIL` with a domain sender such as `Panther City Detailing <bookings@yourdomain.com>`.
 
-Google Voice is the preferred first option if available because it looks more reputable for a parent-facing local service. TextNow is another possible free option.
-
-## Updating Contact Details
+## Contact Details
 
 Shared launch constants live in:
 
@@ -67,40 +66,24 @@ lib/site.ts
 
 Update these values there:
 
+- `BUSINESS_NAME`
 - `CONTACT_EMAIL`
-- `BOOKING_FORM_URL`
 - `PHONE_PLACEHOLDER`
 - social links and handles
 
-Future backend connection options if Fillout is replaced later:
-
-- Formspree endpoint
-- Resend email API through a Vercel Server Action or API route
-- Supabase table insert
-- Firebase/Firestore write
-- Native Vercel Server Action
-
-## Brand Direction
-
-Current positioning:
+The temporary phone placeholder is:
 
 ```text
-Painting - Cleaning - Home Refresh
+Business phone coming soon
 ```
 
-Panther City Helpers should feel like a bold, trustworthy Fort Worth home services brand focused on visible before-and-after improvement. Keep the copy direct and local. Emphasize interior painting, deep cleaning, garage cleanouts, garage organization, house number painting, and small home refresh jobs.
+TODO: Replace phone placeholder after claiming a free Google Voice number.
 
-Do not add fake reviews, fake certifications, or claims that the business does "everything."
-
-Social bios and content direction live in:
-
-```text
-docs/social-repositioning.md
-```
+Google Voice is the preferred first option if available because it looks more reputable for a customer-facing local service. TextNow is another possible free option.
 
 ## Environment Variables
 
-Copy `.env.example` to `.env.local` for local production URL testing:
+Copy `.env.example` to `.env.local` for local testing:
 
 ```bash
 cp .env.example .env.local
@@ -126,7 +109,9 @@ If this is not set, the app falls back to Vercel's production URL when available
    - Output Directory: leave blank/default for Next.js
 6. Add environment variables in **Project Settings -> Environment Variables**:
    - `NEXT_PUBLIC_SITE_URL`
-   - Any future form backend keys when added
+   - `RESEND_API_KEY`
+   - `BOOKING_TO_EMAIL`
+   - `RESEND_FROM_EMAIL`
 7. Click **Deploy**.
 
 Vercel will build the app and host the public site on a `.vercel.app` URL. After the GitHub repo is connected, pushes to the production branch create production deployments, and pull requests/other branches create preview deployments.
@@ -134,25 +119,36 @@ Vercel will build the app and host the public site on a `.vercel.app` URL. After
 ## Custom Domain Setup
 
 1. In the Vercel project, open **Settings -> Domains**.
-2. Add the final domain, such as `panthercityhelpersfw.com`.
+2. Add the final domain, such as `panthercitydetailing.com`.
 3. Follow Vercel's DNS instructions at the domain registrar.
 4. After the domain is verified, update:
 
 ```text
-NEXT_PUBLIC_SITE_URL=https://panthercityhelpersfw.com
+NEXT_PUBLIC_SITE_URL=https://panthercitydetailing.com
 ```
 
-5. Redeploy so Open Graph and metadata use the final public URL.
+5. Verify the same domain in Resend if you want to send from `bookings@panthercitydetailing.com`.
+6. Redeploy so Open Graph and metadata use the final public URL.
 
-## Why Vercel Keeps the Site Online
+## Brand Direction
 
-Vercel hosts the built Next.js site on its managed platform. Once deployed, the public URL stays available without keeping a local development server running. New GitHub pushes trigger fresh deployments, and Vercel keeps serving the latest successful production deployment.
+Current positioning:
+
+```text
+Cleaner. Sharper. Better.
+```
+
+Panther City Detailing should feel premium, clean, mobile-first, and trustworthy. The strongest public impression should be mobile detailing, pressure washing, exterior cleaning, and visible before/after transformations.
+
+Do not add fake reviews, fake certifications, fake before/after photos, or claims that the business does every service.
 
 ## Launch Checklist
 
+- Add `RESEND_API_KEY` in Vercel.
+- Confirm `BOOKING_TO_EMAIL` is correct.
+- Replace `RESEND_FROM_EMAIL` after verifying a sending domain in Resend.
 - Confirm final domain and set `NEXT_PUBLIC_SITE_URL`.
-- Confirm the Facebook page URL once the exact public page link is available.
-- Test the Fillout quote form from mobile and desktop.
+- Test the on-site booking form on mobile and desktop.
 - Test the email link on mobile and desktop email clients.
 - Replace the phone placeholder after claiming the business number.
-- Add real project photos when available.
+- Add real before/after project photos when available.

@@ -1,142 +1,128 @@
 import {
   BadgeCheck,
-  CalendarCheck,
+  Car,
   CheckCircle2,
-  ClipboardCheck,
-  Hash,
+  Drill,
+  Droplets,
+  Gauge,
   Home,
   Mail,
   MapPin,
-  PaintRoller,
   ShieldCheck,
   Sparkles,
   SprayCan,
-  Trash2,
-  Warehouse,
+  Timer,
 } from "lucide-react";
 import { ContactForm } from "@/components/contact-form";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { SectionHeader } from "@/components/section-header";
-import { BOOKING_FORM_URL, CONTACT_EMAIL } from "@/lib/site";
+import { BUSINESS_NAME, CONTACT_EMAIL } from "@/lib/site";
 
 const services = [
   {
-    icon: PaintRoller,
-    title: "Interior Painting",
+    icon: Sparkles,
+    title: "Mobile Detailing",
     description:
-      "Walls, bedrooms, trim, touch-ups, and clean refreshes that make a room feel finished again.",
+      "Interior and exterior refreshes brought to you around Fort Worth. Clean, sharp, and handled with care.",
   },
   {
-    icon: SprayCan,
-    title: "Deep Cleaning",
+    icon: Droplets,
+    title: "Pressure Washing",
     description:
-      "Focused cleaning for move-outs, resets, garages, kitchens, and spaces that need real attention.",
-  },
-  {
-    icon: Trash2,
-    title: "Garage Cleanouts",
-    description:
-      "From cluttered to usable. Sorting, hauling prep, sweeping, and clearing space without the drama.",
-  },
-  {
-    icon: Hash,
-    title: "House Number Painting",
-    description:
-      "Crisp curb numbers that make the front of a home look sharper and easier to find.",
+      "Driveways, walkways, patios, bins, and outdoor surfaces that need a serious reset.",
   },
   {
     icon: Home,
-    title: "Home Refresh",
+    title: "Exterior Cleaning",
     description:
-      "Small fixes, touch-ups, organization, and detail work that helps a home feel cared for.",
-  },
-];
-
-const steps = [
-  "Send the quote request with the service, photos, timing, and the address area.",
-  "We review the scope and follow up with questions or an honest starting estimate.",
-  "Once confirmed, we show up ready, protect the space, do the work, and leave it better.",
-];
-
-const trustPoints = [
-  {
-    icon: MapPin,
-    title: "Local Fort Worth",
-    description:
-      "Built for Fort Worth homeowners who want direct, practical help without a complicated process.",
+      "Home-facing cleanups for curb appeal: entry areas, patio surfaces, garage doors, and more.",
   },
   {
-    icon: ShieldCheck,
-    title: "Reliable communication",
+    icon: Car,
+    title: "Interior Detail",
     description:
-      "Quote requests are reviewed before scheduling so expectations, timing, and scope are clear.",
+      "Vacuuming, wipe-downs, cupholders, panels, mats, and the little spots that make a car feel new again.",
   },
   {
-    icon: BadgeCheck,
-    title: "Quality work",
+    icon: Gauge,
+    title: "Maintenance Wash",
     description:
-      "We focus on clean lines, reset spaces, honest pricing, and before/after results people can see.",
+      "Simple recurring washes for people who want their vehicle to stay presentable without overthinking it.",
   },
 ];
 
 const transformations = [
   {
-    title: "Interior Painting",
-    before: "scuffed wall",
-    after: "clean finish",
+    title: "Wheel & Tire Reset",
+    before: "road film",
+    after: "sharp finish",
   },
   {
-    title: "Garage Refresh",
-    before: "cluttered bay",
-    after: "usable zones",
+    title: "Driveway Wash",
+    before: "stained concrete",
+    after: "clean pass",
   },
   {
-    title: "House Numbers",
-    before: "faded curb",
-    after: "sharp numbers",
+    title: "Interior Detail",
+    before: "daily buildup",
+    after: "fresh cabin",
   },
 ];
 
-const serviceAreas = [
-  "Fort Worth",
-  "TCU area",
-  "Westcliff",
-  "Arlington Heights",
-  "Ridglea",
-  "Cultural District",
-  "Nearby areas by request",
+const processSteps = [
+  {
+    title: "Send the request",
+    text: "Tell us the service, area, vehicle or surface, and the timing that works best.",
+  },
+  {
+    title: "We confirm the scope",
+    text: "We review the details and follow up before the job is scheduled. No instant-book confusion.",
+  },
+  {
+    title: "We show up ready",
+    text: "We bring the plan, do the work, and focus on the kind of result you can actually see.",
+  },
+];
+
+const trustPoints = [
+  "Fort Worth based",
+  "Mobile-first service",
+  "Clear communication",
+  "No fake reviews",
+  "Before/after focused",
+  "Honest scope and pricing",
 ];
 
 const faqs = [
   {
-    question: "Is the quote form an instant booking?",
+    question: "Is this still Panther City Helpers?",
     answer:
-      "No. It sends a quote request. Panther City Helpers reviews the scope, timing, photos, and details before confirming a job.",
+      "The site is being redesigned around Panther City Detailing. The current contact email and social handles still point to the existing Panther City accounts.",
   },
   {
-    question: "What should I include in the request?",
+    question: "Does the form submit on this website?",
     answer:
-      "Include the service you need, photos if possible, your area of Fort Worth, timing, and any details that affect the scope.",
+      "Yes. The booking form now submits to the website backend. Once Resend is configured in Vercel, new requests are emailed directly to Panther City.",
   },
   {
-    question: "Do you do huge remodels or licensed trade work?",
+    question: "Is a booking request automatically confirmed?",
     answer:
-      "No. The focus is painting, cleaning, garage refreshes, house numbers, and small home refresh jobs. We do not claim licensed trade work.",
+      "No. A request starts the conversation. We review the scope, timing, access, and fit before confirming the job.",
   },
   {
-    question: "Do you use fake reviews or stock transformations?",
+    question: "Do you publish fake reviews?",
     answer:
-      "No. The transformation blocks are design placeholders until real before/after photos are ready.",
+      "No. Reviews and finished-project photos should only be added when they are real.",
   },
 ];
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Panther City Helpers",
+  name: BUSINESS_NAME,
   description:
-    "Fort Worth painting, cleaning, garage cleanout, house number painting, and home refresh service.",
+    "Fort Worth mobile detailing, pressure washing, exterior cleaning, and vehicle refresh service.",
   email: CONTACT_EMAIL,
   areaServed: {
     "@type": "City",
@@ -157,83 +143,90 @@ export default function HomePage() {
       <main>
         <section className="hero" id="home">
           <div className="hero__content">
-            <p className="eyebrow">Fort Worth's go-to for</p>
-            <h1>Fort Worth's Go-To For Painting, Cleaning & Home Refresh.</h1>
+            <h1>
+              Cleaner.
+              <br />
+              Sharper.
+              <br />
+              <span>Better.</span>
+            </h1>
             <p className="hero__lede">
-              Interior painting, deep cleaning, garage refreshes, house number
-              painting, and more.
+              Mobile detailing, pressure washing, and exterior cleaning in Fort
+              Worth, TX.
             </p>
             <div className="hero__actions" aria-label="Primary actions">
-              <a
-                className="button button--primary"
-                href={BOOKING_FORM_URL}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Get a Free Quote
-                <CalendarCheck size={18} aria-hidden="true" />
+              <a className="button button--primary" href="#request-help">
+                Book Your Service
+                <Sparkles size={18} aria-hidden="true" />
               </a>
               <a className="button button--secondary" href="#services">
-                View Services
-                <ClipboardCheck size={18} aria-hidden="true" />
+                Learn More
+                <CheckCircle2 size={18} aria-hidden="true" />
               </a>
             </div>
-            <div className="trust-badges" aria-label="Trust badges">
+            <div className="trust-badges" aria-label="Service badges">
               <span>
-                <MapPin size={17} aria-hidden="true" />
-                Local Fort Worth
+                <Car size={17} aria-hidden="true" />
+                Detailing
               </span>
               <span>
-                <ShieldCheck size={17} aria-hidden="true" />
-                Reliable
+                <Drill size={17} aria-hidden="true" />
+                Pressure Washing
               </span>
               <span>
-                <BadgeCheck size={17} aria-hidden="true" />
-                Quality Work
+                <Home size={17} aria-hidden="true" />
+                Exterior Cleaning
               </span>
             </div>
           </div>
-          <div className="hero__identity" aria-label="Panther City Helpers visual identity">
-            <div className="mascot-card">
-              <div className="mascot-card__burst" />
-              <div className="mascot-card__portrait">
-                <span>PCH</span>
+
+          <div className="hero__visual" aria-label="Panther City Detailing visual identity">
+            <div className="vehicle-scene">
+              <div className="vehicle-scene__skyline" />
+              <div className="vehicle-scene__spray" />
+              <div className="vehicle">
+                <div className="vehicle__cab" />
+                <div className="vehicle__body" />
+                <div className="vehicle__wheel vehicle__wheel--front" />
+                <div className="vehicle__wheel vehicle__wheel--back" />
+                <span>PC</span>
               </div>
-              <div className="mascot-card__stamp">
-                <strong>PCH</strong>
-                <span>FW</span>
+              <div className="panther-lockup">
+                <span>Panther</span>
+                <strong>City</strong>
+                <em>Detailing</em>
               </div>
-              <p>Painting - Cleaning - Home Refresh</p>
             </div>
           </div>
         </section>
 
         <section className="proof-strip" aria-label="Service promise">
           <div>
-            <CheckCircle2 size={18} aria-hidden="true" />
-            <span>Quality work</span>
+            <MapPin size={18} aria-hidden="true" />
+            <span>Fort Worth, TX</span>
           </div>
           <div>
-            <CheckCircle2 size={18} aria-hidden="true" />
-            <span>Honest prices</span>
+            <ShieldCheck size={18} aria-hidden="true" />
+            <span>Trustworthy communication</span>
           </div>
           <div>
-            <CheckCircle2 size={18} aria-hidden="true" />
-            <span>Before/after results</span>
+            <BadgeCheck size={18} aria-hidden="true" />
+            <span>Quality work. Honest scope.</span>
           </div>
         </section>
 
-        <section className="section section--light" id="services">
+        <section className="section section--dark" id="services">
           <SectionHeader
             eyebrow="Our services"
-            title="Clean, practical work that changes how a space feels"
-            description="No overpromising. No fake certifications. Just focused painting, cleaning, garage refreshes, and small home upgrades."
+            title="Focused services with real transformation energy"
+            description="Mobile detailing, exterior cleaning, and pressure washing without the overcomplicated quote process."
+            inverted
           />
           <div className="service-grid">
             {services.map((service) => (
               <article className="service-card" key={service.title}>
                 <div className="service-card__icon">
-                  <service.icon size={27} aria-hidden="true" />
+                  <service.icon size={28} aria-hidden="true" />
                 </div>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
@@ -242,12 +235,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section section--dark" id="transformations">
+        <section className="section section--gallery" id="transformations">
           <SectionHeader
-            eyebrow="Before / After"
-            title="Transformations That Speak"
-            description="Real project photos can drop into these slots later. For now, the layout is ready for clean before/after proof."
-            inverted
+            eyebrow="Before & After"
+            title="Transformations that speak"
+            description="Built for real project photos. Until those are ready, the gallery uses clean visual slots that are easy to replace in code."
           />
           <div className="transformation-grid">
             {transformations.map((item) => (
@@ -257,6 +249,7 @@ export default function HomePage() {
                     <span>Before</span>
                     <strong>{item.before}</strong>
                   </div>
+                  <div className="comparison__divider" />
                   <div className="comparison__side comparison__side--after">
                     <span>After</span>
                     <strong>{item.after}</strong>
@@ -268,36 +261,42 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section" id="how-it-works">
-          <div className="split">
-            <SectionHeader
-              eyebrow="Process"
-              title="Quotes stay simple"
-              description="Send the request, include photos if you have them, and we will confirm the scope before anything is scheduled."
-            />
-            <div className="step-list">
-              {steps.map((step, index) => (
-                <div className="step" key={step}>
-                  <span>{index + 1}</span>
-                  <p>{step}</p>
-                </div>
+        <section className="section about-section" id="about">
+          <div className="about-panel">
+            <div>
+              <p className="eyebrow">About</p>
+              <h2>Premium look. Local pace. Simple booking.</h2>
+              <p>
+                Panther City Detailing is built for Fort Worth drivers and
+                homeowners who want the job handled cleanly without a messy
+                back-and-forth. Send the request, we confirm the scope, then we
+                show up ready.
+              </p>
+            </div>
+            <div className="trust-list" aria-label="Trust points">
+              {trustPoints.map((point) => (
+                <span key={point}>
+                  <CheckCircle2 size={17} aria-hidden="true" />
+                  {point}
+                </span>
               ))}
             </div>
           </div>
         </section>
 
-        <section className="section section--light" id="trust">
+        <section className="section section--dark" id="how-it-works">
           <SectionHeader
-            eyebrow="Why homeowners trust it"
-            title="Local, direct, and focused on the finish"
-            description="The goal is simple: make the space look better, feel better, and stay that way."
+            eyebrow="How it works"
+            title="Easy to request. Clear before we start."
+            description="The on-site booking form emails your request directly, so nothing depends on a third-party form page."
+            inverted
           />
-          <div className="trust-grid">
-            {trustPoints.map((point) => (
-              <article className="trust-card" key={point.title}>
-                <point.icon size={26} aria-hidden="true" />
-                <h3>{point.title}</h3>
-                <p>{point.description}</p>
+          <div className="step-list">
+            {processSteps.map((step, index) => (
+              <article className="step" key={step.title}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
               </article>
             ))}
           </div>
@@ -305,32 +304,27 @@ export default function HomePage() {
 
         <section className="quote-band">
           <div>
-            <p className="eyebrow">Ready to refresh your space?</p>
-            <h2>Get a clear quote before the work starts.</h2>
+            <p className="eyebrow">Ready for the reset?</p>
+            <h2>Book a cleaner, sharper service without leaving the site.</h2>
           </div>
-          <a
-            className="button button--primary"
-            href={BOOKING_FORM_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Get a Free Quote
-            <CalendarCheck size={18} aria-hidden="true" />
+          <a className="button button--primary" href="#request-help">
+            Book Now
+            <Timer size={18} aria-hidden="true" />
           </a>
         </section>
 
         <section className="section request-section" id="request-help">
           <div className="request-layout">
             <div>
-              <p className="eyebrow">Contact</p>
-              <h2>Tell us what needs refreshing.</h2>
+              <p className="eyebrow">Booking</p>
+              <h2>Tell us what needs to look better.</h2>
               <p>
-                Choose a service, describe the space, and send photos through
-                the quote form if you have them. We will follow up with a clear
-                next step.
+                The form below stays on this website and emails your request to
+                Panther City. Add the vehicle or surface, your Fort Worth area,
+                and a good time to follow up.
               </p>
               <div className="contact-card">
-                <Sparkles size={22} aria-hidden="true" />
+                <Mail size={22} aria-hidden="true" />
                 <div>
                   <strong>Prefer email?</strong>
                   <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
@@ -341,29 +335,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="section section--light" id="service-area">
-          <div className="area-layout">
-            <div>
-              <p className="eyebrow">Service area</p>
-              <h2>Serving Fort Worth, TX</h2>
-              <p>
-                Panther City Helpers is built for Fort Worth homeowners who want
-                practical improvements without a drawn-out process.
-              </p>
-            </div>
-            <div className="area-list" aria-label="Example service areas">
-              {serviceAreas.map((area) => (
-                <span key={area}>{area}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-
         <section className="section section--dark" id="faq">
           <SectionHeader
             eyebrow="FAQ"
-            title="Good questions before you book"
-            description="A few practical answers before you request a quote."
+            title="A few things before you book"
+            description="Short answers, no fake polish."
             inverted
           />
           <div className="faq-list">
@@ -377,14 +353,9 @@ export default function HomePage() {
         </section>
       </main>
       <Footer />
-      <a
-        className="mobile-booking"
-        href={BOOKING_FORM_URL}
-        target="_blank"
-        rel="noreferrer"
-      >
-        Get Quote
-        <CalendarCheck size={18} aria-hidden="true" />
+      <a className="mobile-booking" href="#request-help">
+        Book Now
+        <Sparkles size={18} aria-hidden="true" />
       </a>
       <script
         type="application/ld+json"
